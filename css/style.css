@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#color{
+    color: #F7CE3E;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: #1A2930;
+}
+
+hr{
+    background-color: gray;
+    width: 10px;
+    margin: 5px;
+}
+/*------conteudo-----------*/
+
+.conteudo {
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5%;
+}
+
+.conteudo .sec {
+    margin: 5px;
+}
+.sec{
+    color: rgb(38, 37, 37);
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.sec h1, p{
+}
+
+/*--------navbar--------*/
+
+.topnav {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #1A2930;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: .3s;
+    margin: 5px;
+}
+
+.topnav a.cad{
+    float: right;
+}
+
+.topnav a:hover {
+    background-color: #314750;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: #F7CE3E;
+    color: black;
+}
+
+.topnav .icone {
+    display: none;
+}
+
+
+/*--------footer--------*/
+
+.main-content {
+    color: #ddd;
+    display: flex;
+}
+
+.main-content .box {
+    flex-basis: 50%;
+    padding: 20px 20px;
+    margin: 15px;
+}
+
+.box h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .content:before {
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+}
+
+.box .content:after {
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 20%;
+    background: #F7CE3E;
+}
+
+
+/*---primeira coluna footer---*/
+
+.left .content p {
+    text-align: justify;
+}
+
+.left .content .social {
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+    padding: 0 2px;
+}
+
+.left .content .social a span {
+    color: #ddd;
+    height: 40px;
+    width: 40px;
+    background: #21333b;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.left .content .social a span:hover {
+    background: #F7CE3E;
+}
+
+
+/*---segunda coluna footer---*/
+
+.center .content .fas {
+    font-size: 1.4375rem;
+    background: #21333b;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover {
+    background: #F7CE3E;
+}
+
+.center .content .text {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .phone {
+    margin: 10px 0;
+}
+
+
+/*---terceira coluna footer---*/
+
+.right form .msg {
+    margin-top: 10px;
+}
+
+.right form .text {
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+}
+
+.right form input,
+.right form textarea {
+    color: #ddd;
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #25333a;
+    padding-left: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.right form input:focus,
+.right form textarea:focus {
+    outline: none;
+    outline-color: #F7CE3E;
+}
+
+.right form input {
+    height: 35px;
+}
+
+.right form .btn {
+    margin-top: 10px;
+}
+
+.right form .btn button {
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #F7CE3E;
+    color: black;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.right form .btn button:hover {
+    background: #f2f2f2;
+}
+
+
+/*----layout da pagina com @media----*/
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icone {
+        color: white;
+        float: right;
+        display: block;
+        background-color: transparent;
+    }
+    .main-content {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box {
+        margin: 15px 0;
+    }
+    .conteudo {
+        margin: 10px 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: fixed;
+    }
+    .topnav.responsive .icone {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
