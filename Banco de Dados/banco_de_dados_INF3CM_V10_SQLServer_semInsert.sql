@@ -1,6 +1,6 @@
 --DELETE FROM tb_cliente_estacionamento WHERE id_cli2 = 2  --exemplo de como eliminar um insert de uma tabela
 
-
+----pppp
 
 
 
