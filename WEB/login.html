@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <title>Login</title>
+    <link rel="icon" type="image/icon" href="img/logo.ico" />
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="css/login.css">
@@ -12,40 +14,35 @@
 
     <div class="login-page">
         <div class="form">
-        <H1 class="orion">Orion Park</H1>
+            <H1 class="orion">Orion Park</H1>
 
-          <form class="register-form" action="" method=""> 
+            <form class="register-form" action="" method="">
 
-            <input type="text" placeholder="Nome"/>
-            <input type="password" placeholder="Senha"/>
-            <input type="text" placeholder="Email"/>
-            <label>Tipo de cadastro</label>
-            <select name="cars" id="cars">
+                <input type="text" placeholder="Nome" />
+                <input type="password" placeholder="Senha" />
+                <input type="text" placeholder="Email" />
+                <label>Tipo de cadastro</label>
+                <select name="cars" id="cars">
               <option value="adm">Administrador</option>
               <option value="func">Funcionário</option>
             </select>
-            <button>Criar</button>
-            <p class="message">Ja está registrado? <a href="#">Entrar</a></p>
-            <p class="message"><a href="index.html">Voltar ao ínicio</a></p>
-          </form>
+                <button>Criar</button>
+                <p class="message">Ja está registrado? <a href="#">Entrar</a></p>
+                <p class="message"><a href="index.html">Voltar ao ínicio</a></p>
+            </form>
 
-          <form class="login-form" action="" method="">
+            <form class="login-form" action="" method="">
 
-            <input type="text" placeholder="Email"/>
-            <input type="password" placeholder="Senha"/>
-            <button>login</button>
-            <p class="message">Não está registrado? <a href="#">Criar conta.</a></p>
-            <p class="message"><a href="index.html">Voltar ao ínicio</a></p>
+                <input type="text" placeholder="Email" />
+                <input type="password" placeholder="Senha" />
+                <button>login</button>
+                <p class="message">Não está registrado? <a href="cadEstacionamento.html">Criar conta.</a></p>
+                <p class="message"><a href="index.html">Voltar ao ínicio</a></p>
 
-          </form>
+            </form>
         </div>
-      </div>
+    </div>
 
-      <script>
-        $('.message a').click(function(){
-            $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-        });
-      </script>
 
 
 </body>

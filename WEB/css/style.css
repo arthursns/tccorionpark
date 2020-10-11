@@ -4,9 +4,9 @@
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#color{
-    color: #F7CE3E;
 
+#color {
+    color: #F7CE3E;
 }
 
 body {
@@ -20,31 +20,68 @@ footer {
     background: #1A2930;
 }
 
-hr{
-    background-color: gray;
-    width: 10px;
-    margin: 5px;
-}
+
 /*------conteudo-----------*/
 
 .conteudo {
     font-size: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding-left: 5%;
 }
 
-.conteudo .sec {
-    margin: 5px;
+.conteudo p,
+h1,
+h2 {
+    padding: 10px;
 }
-.sec{
+
+.conteudo .sec {
+    margin: px;
+}
+
+.sec {
     color: rgb(38, 37, 37);
     flex-wrap: wrap;
     padding: 10px;
 }
 
-.sec h1, p{
+.sec img {
+    max-width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
+
+.sec .esquerda,
+.sec .direita {
+    padding-left: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    max-width: 100%;
+    display: flex;
+    flex-basis: 50%;
+    padding: 0px;
+    padding-bottom: 2.5%;
+}
+
+.sec .esquerda img {
+    max-width: 60%;
+    margin-left: 10%;
+    margin-right: 0%;
+    right: 0;
+}
+
+.sec .direita img {
+    max-width: 60%;
+    margin-left: 0%;
+    margin-right: 10%;
+    left: 0;
+}
+
+.esquerda1 {
+    width: 100%;
+}
+
 
 /*--------navbar--------*/
 
@@ -53,6 +90,8 @@ hr{
     position: relative;
     overflow: hidden;
     background-color: #1A2930;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .topnav a {
@@ -67,7 +106,7 @@ hr{
     margin: 5px;
 }
 
-.topnav a.cad{
+.topnav a.cad {
     float: right;
 }
 
@@ -265,9 +304,32 @@ hr{
         margin: 15px 0;
     }
     .conteudo {
-        margin: 10px 0;
+        margin: 5px;
         flex-wrap: wrap;
         flex-direction: column;
+        padding-left: 0%;
+    }
+    .sec img {
+        max-width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .sec .esquerda,
+    .sec .direita {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .sec .esquerda img,
+    .sec .direita img {
+        max-width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .sec .direita img {
+        padding-top: 5%;
+    }
+    .conteudo .sec .direita .direita1 {
+        padding-top: 5%;
     }
 }
 
@@ -284,5 +346,9 @@ hr{
         float: none;
         display: block;
         text-align: center;
+    }
+    .topnav {
+        padding-left: 0%;
+        padding-right: 0%;
     }
 }
