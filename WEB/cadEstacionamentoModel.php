@@ -26,6 +26,9 @@ include ("conexaoBD.php");
 
 //Validação se não há estacionamentos cadastrados no mesmo CNPJ
 
+//Preciso corrigir isso!!!
+
+/*
 	$consultaValidaEstacionamento = "SELECT (cnpj) FROM tb_cliente_estacionamento";
 	$exec = sqlsrv_query($conn, $consultaValidaEstacionamento);
 	if($exec === false) {
@@ -39,17 +42,18 @@ include ("conexaoBD.php");
 	 		</script>";
 	 	}
 	 }
+*/
 
 //Inserções
 
 		 //Inserção tabela Login e coleta do ID inserido para inserção em tabelas dependentes
-		 $insertLogin = "INSERT INTO tb_login (nivel_acesso, senha, usuario)
-		 VALUES (0, HASHBYTES('md5','$senha'), '$usuario')";
+		 $insertLogin = "INSERT INTO tb_login (senha, usuario)
+		 VALUES (HASHBYTES('md5','$senha'), '$usuario')";
 		 $exec1 = sqlsrv_query($conn, $insertLogin);
 		 if ($exec1 === false) {
 		 	die(print_r(sqlsrv_errors(), true));
 		 }else{
-		 	$idLoginTemp = "SELECT SCOPE_IDENTITY()";
+		 	$idLoginTmp = "SELECT SCOPE_IDENTITY()";
 		 	$exec2 = sqlsrv_query($conn, $idLoginTmp);
 		 	if($exec2 === false) {
 		     die(print_r(sqlsrv_errors(), true));

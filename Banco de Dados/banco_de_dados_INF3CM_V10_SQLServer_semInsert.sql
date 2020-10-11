@@ -13,7 +13,7 @@ go
 use ESTACIONAMENTO_INF3CM 
 go
  create table tb_endereco (
-id_endereco  int identity primary key not null,
+id_endereco  tinyint identity primary key not null,
 bairro varchar(40) not null,
 cidade varchar(40) not null,
 estado varchar (40) not null,
@@ -185,3 +185,10 @@ id_login int not null,
 constraint fk_login_nivel_acesso foreign key(id_login)
 references tb_login (id_login),
 );
+
+select * from tb_cliente_estacionamento
+select * from tb_login
+select * from tb_endereco
+select * from tb_telefone
+
+SELECT SCOPE_IDENTITY()
