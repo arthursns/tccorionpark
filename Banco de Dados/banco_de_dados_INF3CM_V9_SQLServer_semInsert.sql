@@ -55,7 +55,7 @@ senha varchar(40) not null,
 usuario varchar(40) not null
 ); 
 go
-create table tb_responsável(
+create table tb_responsavel(
 id_responsavel int primary key not null,
 nome varchar(40) not null,
 email varchar(40) not null,
@@ -67,7 +67,7 @@ constraint fk_cli2_responsavel foreign key(id_cli2)
 references tb_cliente_estacionamento (id_cli2)
 );
 go
-create table tb_cliente_Estacionar(
+create table tb_cliente_estacionar(
 id_cli1 int primary key identity not null,
 email varchar(40) not null,
 nome varchar(40) not null,
