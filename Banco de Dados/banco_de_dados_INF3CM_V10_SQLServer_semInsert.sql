@@ -51,7 +51,7 @@ references tb_cliente_estacionamento (id_cli2)
 go
 create table tb_login(
 id_login int primary key not null,
-senha varchar(40) not null,
+senha varchar(32) not null,
 usuario varchar(40) not null
 ); 
 go
