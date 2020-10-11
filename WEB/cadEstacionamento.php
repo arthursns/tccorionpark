@@ -21,8 +21,7 @@
     <div class="login-page">
         <div class="main-content form">
             <div class="left box">
-
-                <form class="login-form" action="" method="">
+                <form class="login-form" action="cadEstacionamentoModel.php" method="POST">
                     <H1 class="orion" style="color: black;">Orion Park</H1>
                     <label class="orion" for="" style="color: black;">Dados do Estacionamento:</label>
                     <input type="text" name="nome_fantasia" placeholder="Nome Fantasia">
@@ -66,25 +65,22 @@
             </div>
             <div class="right box">
                 <input type="number" name="numero" placeholder="Número">
-                <input type="text" name="Complemento" placeholder="Complemento">
+                <input type="text" name="complemento" placeholder="Complemento">
                 <label class="orion" for="" style="color: black;">Administrador:</label>
                 <!-- Legal colocar um aviso mencionando que irá poder cadastrar mais usuários depois -->
                 <input type="text" name="nome" placeholder="Nome">
                 <input type="email" name="email" placeholder="E-mail">
                 <input type="text" name="usuario" placeholder="Usuário">
                 <input type="password" name="senha" placeholder="Senha">
-                <input type="text" name="telefoneUser" placeholder="Telefone">
+                <input type="text" name="telefoneUsuario" placeholder="Telefone">
 
-                <button>Criar</button>
+                <button type="submit">Criar</button>
+
                 <p class="message">Ja está registrado? <a href="login.html">Entrar</a></p>
                 <p class="message"><a href="index.html">Voltar ao ínicio</a></p>
             </div>
             </form>
         </div>
     </div>
-
-
-
 </body>
-
 </html>
