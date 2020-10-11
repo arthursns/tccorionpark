@@ -171,7 +171,8 @@ references tb_entrada_controle_saida (id_controle)
 );
 create table tb_cargo(
 id_cargo int primary key not null,
-valor varchar(40) not null,
+valor int not null,
+descrição varchar(40) not null,
 id_responsavel int not null,
 constraint fk_cargo_responsavel foreign key(id_responsavel)
 references tb_responsavel (id_responsavel)
@@ -179,6 +180,7 @@ references tb_responsavel (id_responsavel)
 create table tb_nivel_acesso(
 id_nivel_aceso int primary key not null,
 valor int not null,
+descrição varchar(40) not null,
 id_login int not null,
 constraint fk_login_nivel_acesso foreign key(id_login)
 references tb_login (id_login),
