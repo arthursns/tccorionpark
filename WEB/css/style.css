@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@600&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +21,11 @@ footer {
     background: #1A2930;
 }
 
+a {
+    text-decoration: none;
+    text-emphasis: none;
+}
+
 
 /*------conteudo-----------*/
 
@@ -28,6 +34,11 @@ footer {
     margin-left: 20%;
     margin-right: 20%;
     padding-left: 5%;
+}
+
+.conteudo h1 {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 400;
 }
 
 .conteudo p,
@@ -80,6 +91,21 @@ h2 {
 
 .esquerda1 {
     width: 100%;
+}
+
+.vermais {
+    background-color: #F7CE3E;
+    color: black;
+    text-decoration: none;
+    margin-right: 80%;
+    text-align: center;
+    transition: .3s;
+    padding: 10px 14px;
+}
+
+.vermais:hover {
+    background-color: #111111;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -331,6 +357,11 @@ h2 {
     .conteudo .sec .direita .direita1 {
         padding-top: 5%;
     }
+    .sec .vermais {
+        float: left;
+        margin-right: 0%;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -348,7 +379,7 @@ h2 {
         text-align: center;
     }
     .topnav {
-        padding-left: 0%;
         padding-right: 0%;
+        padding-left: 0%;
     }
 }
