@@ -48,21 +48,20 @@ include ("conexaoBD.php");
 
 		 //Inserção tabela Login e coleta do ID inserido para inserção em tabelas dependentes
 		 $insertLogin = "INSERT INTO tb_login (senha, usuario)
-		 VALUES (HASHBYTES('md5','$senha'), '$usuario')";
+		 VALUES (HASHBYTES('md5','$senha'), '$usuario'); SELECT SCOPE_IDENTITY()";
 		 $exec1 = sqlsrv_query($conn, $insertLogin);
 		 if ($exec1 === false) {
 		 	die(print_r(sqlsrv_errors(), true));
 		 }else{
-		 	$idLoginTmp = "SELECT SCOPE_IDENTITY()";
-		 	$exec2 = sqlsrv_query($conn, $idLoginTmp);
-		 	if($exec2 === false) {
-		     die(print_r(sqlsrv_errors(), true));
+		 	sqlsrv_next_result($exec1); 
+			sqlsrv_fetch($exec1); 
+			echo sqlsrv_get_field($exec1, 0); 
 		 }
-		}
+		
 
 		//2 Inserções tabela telefone
 
-
+/*
 				 //Primeira inserção: Telefone Estacionamento
 				 $insertTelEstacionamento = "INSERT INTO tb_telefone (numero)
 				 VALUES ($telefoneEstacionamento)";
