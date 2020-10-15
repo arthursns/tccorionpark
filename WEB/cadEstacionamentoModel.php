@@ -54,8 +54,8 @@ include ("conexaoBD.php");
 		 	die(print_r(sqlsrv_errors(), true));
 		 }else{
 		 	sqlsrv_next_result($exec1); 
-			sqlsrv_fetch($exec1); 
-			echo sqlsrv_get_field($exec1, 0); 
+			$idTempLogin = sqlsrv_fetch($exec1); 
+			echo $idTempLogin; 
 		 }
 		
 
