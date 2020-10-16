@@ -43,6 +43,12 @@ constraint fk_cli2_vaga foreign key(id_cli2)
 references tb_cliente_estacionamento (id_cli2)
 );
 go
+create table tb_nivel_acesso(
+id_nivel_acesso int identity primary key not null,
+valor int not null,
+descricao varchar(100) not null
+);
+go
 create table tb_login(
 id_login  int identity primary key not null,
 senha varchar(32) not null,
@@ -156,6 +162,7 @@ id_controle int not null,
 constraint fk_cupons_entrada foreign key(id_controle)
 references tb_entrada_controle_saida (id_controle)
 );
+go
 create table tb_avaliacao (
 id_avaliacao int identity primary key not null,
 valor tinyint not null, -- reserva e estacionamento
@@ -166,6 +173,7 @@ id_controle int not null,
 constraint fk_avaliacao_entrada foreign key(id_controle)
 references tb_entrada_controle_saida (id_controle)
 );
+go
 create table tb_cargo(
 id_cargo int identity primary key not null,
 descricao varchar(100) not null,
@@ -173,13 +181,3 @@ id_responsavel int not null,
 constraint fk_cargo_responsavel foreign key(id_responsavel)
 references tb_responsavel (id_responsavel)
 );
-create table tb_nivel_acesso(
-id_nivel_acesso int identity primary key not null,
-valor int not null,
-descricao varchar(100) not null
-);
-
-select * from tb_cliente_estacionamento
-select * from tb_login
-select * from tb_endereco
-select * from tb_telefone
