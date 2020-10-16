@@ -23,6 +23,7 @@ include ("conexaoBD.php");
 		$usuario = $_POST['usuario'];
 		$senha = $_POST['senha'];
 		$telefoneUsuario = $_POST['telefoneUsuario'];
+		$cargo = $_POST['cargo'];
 
 //Validação se não há estacionamentos cadastrados no mesmo CNPJ
 
@@ -101,6 +102,9 @@ function idTemp($queryID) {
 			$idEnderecoTmp = idTemp($exec4);
 			}
 		
+		//Inserção tabela cargo
+
+		$insertCargo = "INSERT INTO tb_cargo (descricao, id_responsavel) "
 
 		//Inserção tabela estacionamento
 

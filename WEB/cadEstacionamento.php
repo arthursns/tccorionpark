@@ -70,6 +70,7 @@
                 <!-- Legal colocar um aviso mencionando que irá poder cadastrar mais usuários depois -->
                 <input type="text" name="nome" placeholder="Nome">
                 <input type="email" name="email" placeholder="E-mail">
+                <input type="text" name="cargo" placeholder="Cargo">
                 <input type="text" name="usuario" placeholder="Usuário">
                 <input type="password" name="senha" placeholder="Senha">
                 <input type="text" name="telefoneUsuario" placeholder="Telefone">
