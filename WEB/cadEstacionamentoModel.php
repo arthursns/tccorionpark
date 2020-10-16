@@ -27,7 +27,6 @@ include ("conexaoBD.php");
 //Validação se não há estacionamentos cadastrados no mesmo CNPJ
 
 //Preciso corrigir isso!!!
-
 /*
 	$consultaValidaEstacionamento = "SELECT (cnpj) FROM tb_cliente_estacionamento";
 	$exec = sqlsrv_query($conn, $consultaValidaEstacionamento);
@@ -42,7 +41,16 @@ include ("conexaoBD.php");
 	 		</script>";
 	 	}
 	 }
-*/
+	 */
+
+
+// Função para consultar o último Id inserido
+function idTemp($queryID) {
+     		sqlsrv_next_result($queryID);
+     		sqlsrv_fetch($queryID);
+    		return sqlsrv_get_field($queryID, 0);
+		}
+
 
 //Inserções
 
@@ -53,80 +61,66 @@ include ("conexaoBD.php");
 		 if ($exec1 === false) {
 		 	die(print_r(sqlsrv_errors(), true));
 		 }else{
-		 	sqlsrv_next_result($exec1); 
-			$idTempLogin = sqlsrv_fetch($exec1); 
-			echo $idTempLogin; 
+		 	$idTempLogin = idTemp($exec1);
 		 }
+		
 		
 
 		//2 Inserções tabela telefone
 
-/*
 				 //Primeira inserção: Telefone Estacionamento
 				 $insertTelEstacionamento = "INSERT INTO tb_telefone (numero)
-				 VALUES ($telefoneEstacionamento)";
-				 $exec3 = sqlsrv_query($conn, $insertTelEstacionamento);
-				 if ($exec3 === false) {
+				 VALUES ('$telefoneEstacionamento'); SELECT SCOPE_IDENTITY()";
+				 $exec2 = sqlsrv_query($conn, $insertTelEstacionamento);
+				 if ($exec2 === false) {
 				 	die(print_r(sqlsrv_errors(), true));
 				 }else{
-				 	$idTelEstacionamentoTmp = "SELECT SCOPE_IDENTITY()";
-				 	$exec4 = sqlsrv_query($conn, $idTelEstacionamentoTmp);
-				 	if($exec4 === false) {
-				     die(print_r(sqlsrv_errors(), true));
+				 	$idTelEstacionamentoTmp = idTemp($exec2);
 				 }
-				}
+				/*
 
 				//Segunda inserção: Telefone Usuario
 				  $insertTelUsuario = "INSERT INTO tb_telefone (numero)
-				 VALUES ($telefoneUsuario)";
-				 $exec5 = sqlsrv_query($conn, $insertTelUsuario);
-				 if ($exec5 === false) {
+				 VALUES ($telefoneUsuario); SELECT SCOPE_IDENTITY()";
+				 $exec3 = sqlsrv_query($conn, $insertTelUsuario);
+				 if ($exec3 === false) {
 				 	die(print_r(sqlsrv_errors(), true));
 				 }else{
-				 	$idTelUsuarioTmp = "SELECT SCOPE_IDENTITY()";
-				 	$exec6 = sqlsrv_query($conn, $idTelEstacionamentoTmp);
-				 	if($exec6 === false) {
-				     die(print_r(sqlsrv_errors(), true));
+				 	$idTelUsuarioTmp = idTemp($exec3);
 				 }
-				}
+				
 
 		//Inserção tabela endereço
 
 		$insertEndereco = "INSERT INTO tb_endereco (bairro, cidade, numero, complemento, rua
-		VALUES ('$bairro', '$cidade', $numero, '$complemento', '$rua')";//tenho que adicionar o estado ($UF) após atualização do SQL
-		$exec7 = sqlsrv_query($conn, $insertEndereco);
-		if ($exec7 === false) {
+		VALUES ('$bairro', '$cidade', $numero, '$complemento', '$rua'); SELECT SCOPE_IDENTITY()";//tenho que adicionar o estado ($UF) após atualização do SQL
+		$exec4 = sqlsrv_query($conn, $insertEndereco);
+		if ($exec4 === false) {
 			die(print_r(sqlsrv_errors(), true));
 		}else{
-			$idEnderecoTmp = "SELECT SCOPE_IDENTITY()";
-			$exec8 = sqlsrv_query($conn, $idEnderecoTmp);
-			if ($exec8 === false) {
-				die(print_r(sqlsrv_errors(), true));
+			$idEnderecoTmp = idTemp($exec4);
 			}
-		}
+		
 
 		//Inserção tabela estacionamento
 
 		$insertEstacionamento = "INSERT INTO tb_cliente_estacionamento (razao_social, nome_fantasia, cnpj, id_endereco, id_telefone)
-		VALUES ('$razao_social', '$nome_fantasia', $cnpj, $idEnderecoTmp, $idTelEstacionamentoTmp)";
-		$exec9 = sqlsrv_query($conn, $insertEstacionamento);
-		if ($exec9 === false) {
+		VALUES ('$razao_social', '$nome_fantasia', $cnpj, $idEnderecoTmp, $idTelEstacionamentoTmp); SELECT SCOPE_IDENTITY()";
+		$exec5 = sqlsrv_query($conn, $insertEstacionamento);
+		if ($exec5 === false) {
 			die(print_r(sqlsrv_errors(), true));
 		}else{
-			$idEstacionamentoTmp = "SELECT SCOPE_IDENTITY()";
-			$exec10 = sqlsrv_query($conn, $idEstacionamentoTmp);
-			if ($exec10 === false) {
-				die(print_r(sqlsrv_errors(), true));
+			$idEstacionamentoTmp = idTemp($exec5);
 			}
-		}
+		
 
 
 		//Inserção tabela responsável
 
 		$insertResponsavel = "INSERT INTO tb_responsavel (nome, email, id_login, id_cli2)
-		VALUES ('$nome', '$email', $idLoginTemp, $idEstacionamentoTmp)";//tenho que adicionar o telefone após atualização do SQL
-		$exec11 = sqlsrv_query($conn, $insertResponsavel);
-		if ($exec11 === false) {
+		VALUES ('$nome', '$email', $idLoginTemp, $idEstacionamentoTmp); SELECT SCOPE_IDENTITY()";//tenho que adicionar o telefone após atualização do SQL
+		$exec6 = sqlsrv_query($conn, $insertRespoRnsavel);
+		if ($exec6 === false) {
 			die(print_r(sqlsrv_errors(), true));
 		}	
 ?>

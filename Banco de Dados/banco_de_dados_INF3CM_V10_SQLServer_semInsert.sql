@@ -14,24 +14,24 @@ use ESTACIONAMENTO_INF3CM
 go
  create table tb_endereco (
 id_endereco  int identity primary key not null,
-bairro varchar(40) not null,
-cidade varchar(40) not null,
-estado varchar (40) not null,
+bairro varchar(50) not null,
+cidade varchar(50) not null,
+UF char (2) not null,
 numero int not null,
-complemento varchar(10) null,
+complemento varchar(50) null,
 rua int not null
 );
 go
 create table tb_telefone (
 id_telefone int identity primary key not null,
-numero int not null,
+numero varchar(14) not null,
 
 );
 go
 create table tb_cliente_estacionamento(
 id_cli2 int identity primary key not null,
-razao_social varchar(40) not null,
-nome_fantasia varchar(40) not null,
+razao_social varchar(255) not null,
+nome_fantasia varchar(255) not null,
 cnpj int not null,
 id_endereco int not null,
 constraint fk_cli2_endereco foreign key(id_endereco)
@@ -43,7 +43,7 @@ references tb_telefone (id_telefone),
 go
 create table tb_vaga(
 id_vaga int identity primary key not null,
-valor int not null,
+valor decimal not null,
 id_cli2 int not null,
 constraint fk_cli2_vaga foreign key(id_cli2)
 references tb_cliente_estacionamento (id_cli2)
@@ -52,13 +52,13 @@ go
 create table tb_login(
 id_login  int identity primary key not null,
 senha varchar(32) not null,
-usuario varchar(40) not null
+usuario varchar(255) not null
 ); 
 go
 create table tb_responsavel(
 id_responsavel int identity primary key not null,
-nome varchar(40) not null,
-email varchar(40) not null,
+nome varchar(255) not null,
+email varchar(100) not null,
 id_login int not null,
 constraint fk_login_responsavel foreign key(id_login)
 references tb_login (id_login),
@@ -72,8 +72,8 @@ references tb_telefone (id_telefone),
 go
 create table tb_cliente_estacionar(
 id_cli1 int identity primary key  not null,
-email varchar(40) not null,
-nome varchar(40) not null,
+email varchar(100) not null,
+nome varchar(255) not null,
 cpf int not null,
 id_login int not null,
 constraint fk_login_cliente_estaciona foreign key(id_login)
@@ -95,12 +95,12 @@ references tb_cliente_estacionamento (id_cli2)
 go
 create table tb_forma_de_pagamento(
 id_forma_pagamento int identity primary key not null,
-tipo_de_pagamento varchar(25) not null
+nome_forma_pagamento varchar(255) not null
 );
 go
 create table tb_pagamento(
 id_pagamento int identity primary key not null,
-valor int not null,
+valor decimal not null,
 id_forma_pagamento int not null,
 constraint  fk_forma_pagamento foreign key(id_forma_pagamento)
 references tb_forma_de_pagamento (id_forma_pagamento),
@@ -111,12 +111,12 @@ references tb_reserva (id_reserva)
 go
 create table tb_marca(
 id_marca int identity primary key not null,
-nome varchar(40) not null
+nome varchar(255) not null
 );
 go
 create table tb_modelo(
 id_modelo int identity primary key not null,
-nome_modelo varchar(40) not null,
+nome_modelo varchar(255) not null,
 id_marca int not null,
 constraint fk_marca foreign key(id_marca)
 references tb_marca (id_marca)
@@ -130,14 +130,14 @@ references tb_cliente_estacionar (id_cli1),
 id_modelo int not null,
 constraint fk_modelo_veiculo foreign key(id_modelo)
 references tb_modelo (id_modelo),
-placa varchar(40) not null,
-cor varchar(40) not null
+placa char(7) not null,
+cor varchar(100) not null
 );
 go
 create table tb_entrada_controle_saida(
 id_controle int identity primary key not null,
-horario_data_saida varchar(40) not null,
-horario_data_entrada varchar(40) not null,
+horario_data_saida datetime not null,
+horario_data_entrada datetime not null,
 id_vaga int not null,
 constraint fk_vaga_entrada foreign key(id_vaga)
 references tb_vaga (id_vaga),
@@ -150,10 +150,10 @@ references tb_reserva (id_reserva)
 );
 go
 create table tb_cupons (
-id_cupon int identity primary key not null,
+id_cupom int identity primary key not null,
 valor int not null, -- reserva e estacionamento
 id_reserva int not null,
-constraint fk_reserva_cupon foreign key(id_reserva)
+constraint fk_reserva_cupom foreign key(id_reserva)
 references tb_reserva (id_reserva),
 id_controle int not null,
 constraint fk_cupons_entrada foreign key(id_controle)
@@ -161,7 +161,7 @@ references tb_entrada_controle_saida (id_controle)
 );
 create table tb_avaliacao (
 id_avaliacao int identity primary key not null,
-valor varchar(10) not null, -- reserva e estacionamento
+valor tinyint not null, -- reserva e estacionamento
 id_reserva int not null,
 constraint fk_reserva_avaliacao foreign key(id_reserva)
 references tb_reserva (id_reserva),
@@ -171,16 +171,15 @@ references tb_entrada_controle_saida (id_controle)
 );
 create table tb_cargo(
 id_cargo int identity primary key not null,
-valor int not null,
-descricao varchar(40) not null,
+descricao varchar(100) not null,
 id_responsavel int not null,
 constraint fk_cargo_responsavel foreign key(id_responsavel)
 references tb_responsavel (id_responsavel)
 );
 create table tb_nivel_acesso(
-id_nivel_aceso int identity primary key not null,
+id_nivel_acesso int identity primary key not null,
 valor int not null,
-descricao varchar(40) not null,
+descricao varchar(100) not null,
 id_login int not null,
 constraint fk_login_nivel_acesso foreign key(id_login)
 references tb_login (id_login),
