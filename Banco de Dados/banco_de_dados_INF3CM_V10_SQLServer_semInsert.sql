@@ -1,9 +1,3 @@
---DELETE FROM tb_cliente_estacionamento WHERE id_cli2 = 2  --exemplo de como eliminar um insert de uma tabela
-
-----pppp
-
-
-
 use master
 go
 drop database ESTACIONAMENTO_INF3CM 
@@ -19,7 +13,7 @@ cidade varchar(50) not null,
 UF char (2) not null,
 numero int not null,
 complemento varchar(50) null,
-rua int not null
+rua varchar(100) not null
 );
 go
 create table tb_telefone (
@@ -32,7 +26,7 @@ create table tb_cliente_estacionamento(
 id_cli2 int identity primary key not null,
 razao_social varchar(255) not null,
 nome_fantasia varchar(255) not null,
-cnpj int not null,
+cnpj varchar(18) not null,
 id_endereco int not null,
 constraint fk_cli2_endereco foreign key(id_endereco)
 references tb_endereco (id_endereco),
@@ -52,7 +46,10 @@ go
 create table tb_login(
 id_login  int identity primary key not null,
 senha varchar(32) not null,
-usuario varchar(255) not null
+usuario varchar(255) not null,
+id_nivel_acesso int not null,
+constraint fk_login_nivel_acesso foreign key(id_nivel_acesso)
+references tb_nivel_acesso (id_nivel_acesso)
 ); 
 go
 create table tb_responsavel(
@@ -74,7 +71,7 @@ create table tb_cliente_estacionar(
 id_cli1 int identity primary key  not null,
 email varchar(100) not null,
 nome varchar(255) not null,
-cpf int not null,
+cpf varchar(11) not null,
 id_login int not null,
 constraint fk_login_cliente_estaciona foreign key(id_login)
 references tb_login (id_login),
@@ -179,10 +176,7 @@ references tb_responsavel (id_responsavel)
 create table tb_nivel_acesso(
 id_nivel_acesso int identity primary key not null,
 valor int not null,
-descricao varchar(100) not null,
-id_login int not null,
-constraint fk_login_nivel_acesso foreign key(id_login)
-references tb_login (id_login),
+descricao varchar(100) not null
 );
 
 select * from tb_cliente_estacionamento

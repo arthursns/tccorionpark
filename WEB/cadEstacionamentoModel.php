@@ -61,7 +61,7 @@ function idTemp($queryID) {
 		 if ($exec1 === false) {
 		 	die(print_r(sqlsrv_errors(), true));
 		 }else{
-		 	$idTempLogin = idTemp($exec1);
+		 	$idLoginTmp = idTemp($exec1);
 		 }
 		
 		
@@ -77,7 +77,7 @@ function idTemp($queryID) {
 				 }else{
 				 	$idTelEstacionamentoTmp = idTemp($exec2);
 				 }
-				/*
+
 
 				//Segunda inserção: Telefone Usuario
 				  $insertTelUsuario = "INSERT INTO tb_telefone (numero)
@@ -92,8 +92,8 @@ function idTemp($queryID) {
 
 		//Inserção tabela endereço
 
-		$insertEndereco = "INSERT INTO tb_endereco (bairro, cidade, numero, complemento, rua
-		VALUES ('$bairro', '$cidade', $numero, '$complemento', '$rua'); SELECT SCOPE_IDENTITY()";//tenho que adicionar o estado ($UF) após atualização do SQL
+		$insertEndereco = "INSERT INTO tb_endereco (bairro, cidade, numero, complemento, rua, UF)
+		VALUES ('$bairro', '$cidade', $numero, '$complemento', '$rua', '$UF'); SELECT SCOPE_IDENTITY()";//tenho que adicionar o estado ($UF) após atualização do SQL
 		$exec4 = sqlsrv_query($conn, $insertEndereco);
 		if ($exec4 === false) {
 			die(print_r(sqlsrv_errors(), true));
@@ -117,10 +117,14 @@ function idTemp($queryID) {
 
 		//Inserção tabela responsável
 
-		$insertResponsavel = "INSERT INTO tb_responsavel (nome, email, id_login, id_cli2)
-		VALUES ('$nome', '$email', $idLoginTemp, $idEstacionamentoTmp); SELECT SCOPE_IDENTITY()";//tenho que adicionar o telefone após atualização do SQL
-		$exec6 = sqlsrv_query($conn, $insertRespoRnsavel);
+		$insertResponsavel = "INSERT INTO tb_responsavel (nome, email, id_login, id_cli2, id_telefone)
+		VALUES ('$nome', '$email', $idLoginTmp, $idEstacionamentoTmp, $idTelUsuarioTmp); SELECT SCOPE_IDENTITY()";//tenho que adicionar o telefone após atualização do SQL
+		$exec6 = sqlsrv_query($conn, $insertResponsavel);
 		if ($exec6 === false) {
 			die(print_r(sqlsrv_errors(), true));
-		}	
+		}else{
+			echo "<script>
+			alert('Estacionamento cadastrado com sucesso!'); windows.localtion='loginEstacionamento.php';
+			</script>";
+		}
 ?>
