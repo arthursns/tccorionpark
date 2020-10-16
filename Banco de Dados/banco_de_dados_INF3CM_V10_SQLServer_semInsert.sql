@@ -60,6 +60,11 @@ constraint fk_login_nivel_acesso foreign key(id_nivel_acesso)
 references tb_nivel_acesso (id_nivel_acesso)
 ); 
 go
+create table tb_cargo(
+id_cargo int identity primary key not null,
+descricao varchar(100) not null
+);
+go
 create table tb_responsavel(
 id_responsavel int identity primary key not null,
 nome varchar(255) not null,
@@ -73,6 +78,9 @@ references tb_cliente_estacionamento (id_cli2),
 id_telefone int not null, 
 constraint fk_responsavel_telefone foreign key (id_telefone)
 references tb_telefone (id_telefone),
+id_cargo int not null,
+constraint fk_cargo_responsavel foreign key(id_cargo)
+references tb_cargo (id_cargo)
 );
 go
 create table tb_cliente_estacionar(
@@ -174,12 +182,4 @@ references tb_reserva (id_reserva),
 id_controle int not null,
 constraint fk_avaliacao_entrada foreign key(id_controle)
 references tb_entrada_controle_saida (id_controle)
-);
-go
-create table tb_cargo(
-id_cargo int identity primary key not null,
-descricao varchar(100) not null,
-id_responsavel int not null,
-constraint fk_cargo_responsavel foreign key(id_responsavel)
-references tb_responsavel (id_responsavel)
 );
