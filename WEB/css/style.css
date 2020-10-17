@@ -59,19 +59,21 @@
     }
     
     .leftcolumn {
+        margin-left: 5%;
         float: left;
-        width: 75%;
+        width: 60%;
     }
     
     .rightcolumn {
         float: left;
-        width: 25%;
+        width: 30%;
         padding-left: 20px;
+        margin-right: 5%;
     }
     
     .fakeimg {
         background-color: #f0f0f0;
-        width: auto%;
+        width: auto;
         padding: 20px;
         background-repeat: no-repeat;
     }
@@ -323,5 +325,15 @@
         }
         .main-content .box {
             margin: 15px 0;
+        }
+        .leftcolumn {
+            float: left;
+            margin-left: 0%;
+            width: 100%;
+        }
+        .rightcolumn {
+            float: left;
+            width: 100%;
+            margin-right: 0%;
         }
     }
