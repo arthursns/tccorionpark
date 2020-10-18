@@ -21,7 +21,7 @@ include ("conexaoBD.php");
 		$nome = $_POST['nome'];
 		$email = $_POST['email'];
 		$usuario = $_POST['usuario'];
-		$senha = $_POST['senha'];
+		$senha = md5(md5($_POST['senha']));
 		$telefoneUsuario = $_POST['telefoneUsuario'];
 		$cargo = $_POST['cargo'];
 
@@ -56,7 +56,7 @@ function idTemp($queryID) {
 
 		 //Inserção tabela Login e coleta do ID inserido para inserção em tabelas dependentes
 		 $insertLogin = "INSERT INTO tb_login (senha, usuario, id_nivel_acesso)
-		 VALUES (HASHBYTES('md5','$senha'), '$usuario', 1); SELECT SCOPE_IDENTITY()";
+		 VALUES ('$senha', '$usuario', 1); SELECT SCOPE_IDENTITY()";
 		 $exec1 = sqlsrv_query($conn, $insertLogin);
 		 if ($exec1 === false) {
 		 	die(print_r(sqlsrv_errors(), true));
@@ -112,7 +112,7 @@ if ($exec5 === false) {
 
 $insertCargo = "INSERT INTO tb_cargo (descricao)
 VALUES ('$cargo'); SELECT SCOPE_IDENTITY()";
-$exec6 = sqlsrv_query($conn, $insertEstacionamento);
+$exec6 = sqlsrv_query($conn, $insertCargo);
 if ($exec6 === false) {
 	die(print_r(sqlsrv_errors(), true));
 }else{
@@ -120,9 +120,8 @@ if ($exec6 === false) {
 }
 
 //Inserção tabela responsável
-
 $insertResponsavel = "INSERT INTO tb_responsavel (nome, email, id_login, id_cli2, id_telefone, id_cargo)
-VALUES ('$nome', '$email', $idLoginTmp, $idEstacionamentoTmp, $idTelUsuarioTmp, $idCargoTmp)";//tenho que adicionar o telefone após atualização do SQL
+VALUES ('$nome', '$email', $idLoginTmp, $idEstacionamentoTmp, $idTelUsuarioTmp, $idCargoTmp)";
 $exec7 = sqlsrv_query($conn, $insertResponsavel);
 if ($exec7 === false) {
 	die(print_r(sqlsrv_errors(), true));
