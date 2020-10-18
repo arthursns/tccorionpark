@@ -22,15 +22,19 @@ if(isset($_POST['user']) && strlen($_POST['user']) > 0){
 	$dado = sqlsrv_fetch_array($exec1);
 	$verificaConsulta = sqlsrv_has_rows($exec1);
 	$erro = [];
+
+	//Verificação se o usuário digitado pelo usuário confere ao cadastrado no Banco de dados
 	if ($verificaConsulta === false) {
 		$erro[] = "<script>alert('Este usuário não existe.')</script>";
 	}else{
 
+		//Verificação se a senha digitada pelo usuário confere com a cadastrada no Banco de dados
 		if ($dado['senha'] == $_SESSION['password']) {
 		}else{
 			$erro[]="<script>alert('Senha incorreta')</script>";
 		}
 }
+	// Não constando nenhum erro, logado com sucesso
 	if (count($erro) == 0 || !isset($erro)) {
 		echo "<script>alert('Logado com sucesso'); location.href='indexGerenciador.php'</script>";
 	}
