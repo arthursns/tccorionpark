@@ -2,7 +2,7 @@
 <html>
 <?php
 
-include("conexao.php");
+include("conexaoBD.php");
 
 //Verificação se usuário já acessou
 if(isset($_POST['user']) && strlen($_POST['user']) > 0){
@@ -11,21 +11,19 @@ if(isset($_POST['user']) && strlen($_POST['user']) > 0){
 
 	$_SESSION['user'] = $_POST['user'];
 	$_SESSION['password'] = md5(md5($_POST['password']));
+	$_SESSION['cnpj'] = $_POST['cnpj'];
 
-	//Selecionar usuário para verificar se há usuarios cadastrados 
-	$sqlcode1 = "SELECT senha_usuario, id_usuario FROM usuario WHERE login_usuario = '$_SESSION[user]'";
-	$sqlcode2 = $mysqli->query($sqlcode1) or die($mysqli->error);
-	$dado = $sqlcode2->fetch_assoc();
-	$total = $sqlcode2->num_rows;
+	//Selecionar usuário para verificar se há usuarios cadastrados com o mesmo inserido pelo usuário
+	$selectLogin = "SELECT senha, usuario FROM tb_login INNER JOIN tb_responsavel ON tb_responsavel.id_login = tb_login.id_login INNER JOIN tb_cliente_estacionamento ON tb_cliente_estacionamento.id_cli2 = tb_responsavel.id_cli2 WHERE usuario = '$_SESSION[user]' AND tb_cliente_estacionamento.cnpj = '$_SESSION[cnpj]'";
+	$exec1 = sqlsrv_query($conn, $selectLogin);
+	if ($exec1 === false) {
+			 	die(print_r(sqlsrv_errors(), true));
+			 }
+
+	$dado = sqlsrv_fetch_array($exec1);
+	$total = sqlsrv_num_rows($exec1);
 	$erro = [];
-	$idlogado = $dado['id_usuario'];
-	$_SESSION['idlogado'] = $idlogado;
-	$sql1 = "SELECT nivelacesso FROM usuario WHERE id_usuario = '$idlogado'";
-	$sql1exec = $mysqli->query($sql1) or die($mysqli->error);
-	$dado1 = $sql1exec->fetch_assoc();
-	$_SESSION['nivelacesso'] =  $dado1['nivelacesso'];
-
-	if ($total ==0) {
+	if ($total == 0) {
 		$erro[] = "<script>alert('Este usuário não existe.')</script>";
 	}else{
 
@@ -38,7 +36,7 @@ if(isset($_POST['user']) && strlen($_POST['user']) > 0){
 		}
 }
 	if (count($erro) == 0 || !isset($erro)) {
-		echo "<script>alert('Logado com sucesso'); location.href='index.php'</script>";
+		echo "<script>alert('Logado com sucesso'); location.href='indexGerenciador.php'</script>";
 	}
 }
 ?>
@@ -53,9 +51,11 @@ if(isset($_POST['user']) && strlen($_POST['user']) > 0){
 	?>
 	<p id="titulo">Entre para continuar</p>
 	<form name="formlogin" method="POST">
-	<a>Usuário:</a>
+	<a>CNPJ do estacionamento:</a>
 	<input type="text" name="cnpj" placeholder="CNPJ do estacionamento">
 	<br>
+	<br>
+	<a>Usuario</a>
 	<input value="<?php if(isset($_SESSION)) echo $_SESSION['user'] ?>" type="text" name="user">
 	<br>
 	<br>
