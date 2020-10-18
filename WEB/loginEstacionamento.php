@@ -14,23 +14,19 @@ if(isset($_POST['user']) && strlen($_POST['user']) > 0){
 	$_SESSION['cnpj'] = $_POST['cnpj'];
 
 	//Selecionar usuário para verificar se há usuarios cadastrados com o mesmo inserido pelo usuário
-	$selectLogin = "SELECT senha, usuario FROM tb_login INNER JOIN tb_responsavel ON tb_responsavel.id_login = tb_login.id_login INNER JOIN tb_cliente_estacionamento ON tb_cliente_estacionamento.id_cli2 = tb_responsavel.id_cli2 WHERE usuario = '$_SESSION[user]' AND tb_cliente_estacionamento.cnpj = '$_SESSION[cnpj]'";
+	$selectLogin = "SELECT senha, usuario FROM tb_login INNER JOIN tb_responsavel ON tb_responsavel.id_login = tb_login.id_login INNER JOIN tb_cliente_estacionamento ON tb_cliente_estacionamento.id_cli2 = tb_responsavel.id_cli2 WHERE usuario = '$_SESSION[user]' AND tb_cliente_estacionamento.cnpj LIKE '$_SESSION[cnpj]'";
 	$exec1 = sqlsrv_query($conn, $selectLogin);
 	if ($exec1 === false) {
 			 	die(print_r(sqlsrv_errors(), true));
 			 }
-
 	$dado = sqlsrv_fetch_array($exec1);
-	$total = sqlsrv_num_rows($exec1);
+	$verificaConsulta = sqlsrv_has_rows($exec1);
 	$erro = [];
-	if ($total == 0) {
+	if ($verificaConsulta === false) {
 		$erro[] = "<script>alert('Este usuário não existe.')</script>";
 	}else{
 
-		if ($dado['senha_usuario'] == $_SESSION['password']) {
-
-			$_SESSION['usuario'] = $dado['id_usuario']; 
-			
+		if ($dado['senha'] == $_SESSION['password']) {
 		}else{
 			$erro[]="<script>alert('Senha incorreta')</script>";
 		}
