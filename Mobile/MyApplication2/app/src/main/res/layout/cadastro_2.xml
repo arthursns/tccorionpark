@@ -26,7 +26,7 @@
         android:layout_width="92dp"
         android:layout_height="36dp"
         android:text="TELEFONE"
-        android:textColor="#D5C324"
+        android:textColor="#F7CE3E"
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="569dp" />
 
@@ -50,7 +50,7 @@
         android:layout_width="92dp"
         android:layout_height="36dp"
         android:text="USUARIO"
-        android:textColor="#D5C324"
+        android:textColor="#F7CE3E"
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="512dp" />
 
@@ -74,7 +74,7 @@
         android:layout_width="92dp"
         android:layout_height="36dp"
         android:text="CPF"
-        android:textColor="#D5C324"
+        android:textColor="#F7CE3E"
         tools:layout_editor_absoluteX="74dp"
         tools:layout_editor_absoluteY="451dp" />
 
@@ -99,7 +99,7 @@
         android:layout_width="92dp"
         android:layout_height="36dp"
         android:text="SENHA"
-        android:textColor="#D5C324"
+        android:textColor="#F7CE3E"
         tools:layout_editor_absoluteX="69dp"
         tools:layout_editor_absoluteY="320dp" />
 
@@ -123,7 +123,7 @@
         android:layout_width="92dp"
         android:layout_height="36dp"
         android:text="NOME"
-        android:textColor="#D5C324"
+        android:textColor="#F7CE3E"
         tools:layout_editor_absoluteX="69dp"
         tools:layout_editor_absoluteY="390dp" />
 
@@ -132,7 +132,7 @@
         android:layout_width="195dp"
         android:layout_height="38dp"
         android:text="CADASTRO"
-        android:textColor="#D5C324"
+        android:textColor="#F7CE3E"
         android:textColorLink="#FFEB3B"
         android:textSize="36sp"
         tools:layout_editor_absoluteX="108dp"
@@ -163,7 +163,7 @@
         android:layout_width="92dp"
         android:layout_height="36dp"
         android:text="EMAIL"
-        android:textColor="#D5C324"
+        android:textColor="#F7CE3E"
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="251dp" />
 
@@ -190,7 +190,7 @@
         android:id="@+id/button4"
         android:layout_width="113dp"
         android:layout_height="41dp"
-        android:background="#D5C324"
+        android:background="#F7CE3E"
         android:text="CADASTRAR"
         android:textColor="#FFFFFF"
         tools:layout_editor_absoluteX="76dp"
