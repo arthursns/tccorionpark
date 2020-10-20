@@ -62,8 +62,7 @@
                 <H1 class="orion">Orion Park</H1>
                 <form class="login-form" name="formlogin" method="">
                     <input type="text" name="cnpj" placeholder="CNPJ do estacionamento">
-                    <input value="<?php if(isset($_SESSION)) echo $_SESSION['user'] ?>" type="text" name="user">
-                    <input type="text" placeholder="Email" />
+                    <input value="<?php if(isset($_SESSION)) echo $_SESSION['user'] ?>" type="text" name="user" placeholder="Usuário">
                     <input type="password" placeholder="Senha" />
                     <button type="submit">Entrar</button>
                     <p class="message">Não está registrado? <a href="cadEstacionamento.php">Criar conta.</a></p>
