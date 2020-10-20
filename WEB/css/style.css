@@ -43,7 +43,7 @@
     body {
         margin: 0;
         font-family: Arial;
-        background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+        background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     }
     
     .header {
@@ -121,7 +121,7 @@
     }
     
     .main-content {
-        color: #ddd;
+        color: rgb(255, 255, 255);
         display: flex;
     }
     
@@ -278,20 +278,6 @@
             width: 100%;
             padding: 10px;
             height: auto;
-        }
-    }
-    
-    @media screen and (device-aspect-ratio: 21/9) {
-        .leftcolumn {
-            margin-left: 20%;
-            float: left;
-            width: 60%;
-        }
-        .rightcolumn {
-            float: left;
-            width: 30%;
-            padding-left: 20px;
-            margin-right: 20%;
         }
     }
     
