@@ -52,15 +52,14 @@
 
     <body>
 
+	<?php if(isset($erro) > 0)
+					foreach ($erro as $msg) {
+						echo "<p>$msg</p>";
+					}
+				?>
         <div class="login-page">
             <div class="form">
                 <H1 class="orion">Orion Park</H1>
-
-                <?php if(isset($erro) > 0)
-    foreach ($erro as $msg) {
-        echo "<p>$msg</p>";
-    }
-?>
                 <form class="login-form" name="formlogin" method="">
                     <input type="text" name="cnpj" placeholder="CNPJ do estacionamento">
                     <input value="<?php if(isset($_SESSION)) echo $_SESSION['user'] ?>" type="text" name="user">

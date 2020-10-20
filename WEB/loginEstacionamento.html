@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="icon" type="image/icon" href="img/logo.ico" />
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/login.css?ts=<?=time()?>">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+    <div class="login-page">
+        <div class="form">
+            <H1 class="orion">Orion Park</H1>
+            <form class="login-form" name="formlogin" method="">
+                <input type="text" name="cnpj" placeholder="CNPJ do estacionamento">
+                <input value="<?php if(isset($_SESSION)) echo $_SESSION['user'] ?>" type="text" name="user">
+                <input type="text" placeholder="Email" />
+                <input type="password" placeholder="Senha" />
+                <button type="submit">Entrar</button>
+                <p class="message">Não está registrado? <a href="cadEstacionamento.html">Criar conta.</a></p>
+                <p class="message"><a href="index.html">Voltar ao ínicio</a></p>
+
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
