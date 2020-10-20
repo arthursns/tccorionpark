@@ -6,7 +6,7 @@
     <link rel="icon" type="image/icon" href="img/logo.ico" />
     <title>Cadastro</title>
     <link rel="stylesheet" href="css/cad.css?ts=<?=time()?>">
-    <link rel="stylesheet" href="css/style.css?ts=<?=time()?>">
+    <!-- <link rel="stylesheet" href="css/style.css?ts=<?=time()?>"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
 </head>
 

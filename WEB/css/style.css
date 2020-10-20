@@ -40,14 +40,10 @@
         box-sizing: border-box;
     }
     
-    .site {
-        margin: 20px;
-    }
-    
     body {
         margin: 0;
         font-family: Arial;
-        background: #000000;
+        background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     }
     
     .header {
@@ -97,18 +93,18 @@
     }
     
     .footer {
-        padding: 10px;
-        background-color: #1A2930;
+        margin: 0;
+        background-color: #0c1c2b;
         margin-top: 20px;
         color: white;
+        margin-bottom: 0%
     }
     
     .footer .column {
         background-color: #3b657948;
         float: left;
         width: 50%;
-        padding: 10px;
-        height: 300px;
+        height: auto;
     }
     
     .footer .row:after {
@@ -125,13 +121,13 @@
     }
     
     .main-content {
-        color: #ddd;
+        color: rgb(255, 255, 255);
         display: flex;
     }
     
     .main-content .box {
         flex-basis: 50%;
-        padding: 20px 20px;
+        padding: 20px 150px;
         margin: 15px;
     }
     
@@ -298,6 +294,11 @@
         .fakeimg {
             max-width: 100%;
             height: auto;
+        }
+        .main-content .box {
+            flex-basis: 50%;
+            padding: 20px 0px;
+            margin: 15px;
         }
     }
     
