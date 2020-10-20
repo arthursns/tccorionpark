@@ -6,7 +6,7 @@
     <link rel="icon" type="image/icon" href="img/logo.ico" />
     <title>Cadastro</title>
     <link rel="stylesheet" href="css/cad.css?ts=<?=time()?>">
-    <!-- <link rel="stylesheet" href="css/style.css?ts=<?=time()?>"> -->
+    <link rel="stylesheet" href="css/style.css?ts=<?=time()?>">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
 </head>
 
@@ -22,7 +22,6 @@
         <div class="main-content form">
             <div class="left box">
                 <form class="login-form" action="cadEstacionamentoModel.php" method="POST">
-                    <H1 class="orion" style="color: black;">Orion Park</H1>
                     <label class="orion" for="" style="color: black;">Dados do Estacionamento:</label>
                     <input type="text" name="nome_fantasia" placeholder="Nome Fantasia">
                     <input type="text" name="razao_social" placeholder="Razão Social">
@@ -61,11 +60,11 @@
 						<option value="SP">São Paulo</option>
 						<option value="SE">Sergipe</option>
 						<option value="TO">Tocantins</option>
+                <input type="number" name="numero" placeholder="Número">
+                <input type="text" name="complemento" placeholder="Complemento">
 					</select>
             </div>
             <div class="right box">
-                <input type="number" name="numero" placeholder="Número">
-                <input type="text" name="complemento" placeholder="Complemento">
                 <label class="orion" for="" style="color: black;">Administrador:</label>
                 <!-- Legal colocar um aviso mencionando que irá poder cadastrar mais usuários depois -->
                 <input type="text" name="nome" placeholder="Nome">
@@ -77,7 +76,7 @@
 
                 <button type="submit">Criar</button>
 
-                <p class="message">Ja está registrado? <a href="login.html">Entrar</a></p>
+                <p class="message">Ja está registrado? <a href="loginEstacionamento.php">Entrar</a></p>
                 <p class="message"><a href="index.html">Voltar ao ínicio</a></p>
             </div>
             </form>

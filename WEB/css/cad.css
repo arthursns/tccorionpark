@@ -1,15 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 body {
     background-color: #e6c13b;
+    overflow: hidden;
 }
 
 .orion {
     text-align: center;
-    font-size: 400px;
+    font-size: 40px;
 }
 
 .login-page {
-    padding: 8% 0 0;
+    padding: 3% 0 0;
     margin: auto;
 }
 
@@ -25,7 +26,6 @@ body {
     z-index: 1;
     background: #FFFFFF;
     margin: 0 auto 100px;
-    padding: 15px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -133,4 +133,15 @@ body {
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (max-width: 600px) {
+    .form {
+        margin: 0%;
+        max-width: 100%;
+        padding: 10px;
+    }
+    body {
+        overflow: visible;
+    }
 }
