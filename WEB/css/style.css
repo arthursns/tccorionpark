@@ -40,14 +40,10 @@
         box-sizing: border-box;
     }
     
-    .site {
-        margin: 20px;
-    }
-    
     body {
         margin: 0;
         font-family: Arial;
-        background: #000000;
+        background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
     }
     
     .header {
@@ -97,18 +93,18 @@
     }
     
     .footer {
-        padding: 10px;
-        background-color: #1A2930;
+        margin: 0;
+        background-color: #0c1c2b;
         margin-top: 20px;
         color: white;
+        margin-bottom: 0%
     }
     
     .footer .column {
         background-color: #3b657948;
         float: left;
         width: 50%;
-        padding: 10px;
-        height: 300px;
+        height: auto;
     }
     
     .footer .row:after {
@@ -131,7 +127,7 @@
     
     .main-content .box {
         flex-basis: 50%;
-        padding: 20px 20px;
+        padding: 20px 150px;
         margin: 15px;
     }
     
@@ -285,6 +281,20 @@
         }
     }
     
+    @media screen and (device-aspect-ratio: 21/9) {
+        .leftcolumn {
+            margin-left: 20%;
+            float: left;
+            width: 60%;
+        }
+        .rightcolumn {
+            float: left;
+            width: 30%;
+            padding-left: 20px;
+            margin-right: 20%;
+        }
+    }
+    
     @media screen and (max-width: 600px) {
         .topnav a:not(:first-child) {
             display: none;
@@ -298,6 +308,11 @@
         .fakeimg {
             max-width: 100%;
             height: auto;
+        }
+        .main-content .box {
+            flex-basis: 50%;
+            padding: 20px 0px;
+            margin: 15px;
         }
     }
     
