@@ -192,6 +192,3 @@ constraint fk_contato_respon foreign key(id_responsavel)
 references tb_responsavel (id_responsavel)
 
 );
-
-
-!! bcp ESTACIONAMENTO_INF3CM.dbo.sysdiagrams out c:\git\diagrma.txt -c -T -S .
