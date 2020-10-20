@@ -1,0 +1,14 @@
+Então arthur, me ferrei bastante pra fazer o layout do zero, me compliquei pra caralho deixar responsivo,
+isso até as 1:20 mais ou menos
+então decidi ver um layout no w3school... 
+
+Mano sinceramente, a gente tem pouco tempo e é css puro aquela porra, então quebrou um galho da desgraça.
+E eu ja entendi todas as classes... enfim qualquer coisa alteração é só pedir, seja em cor, sla.
+Bom, as unicas coisas que é preciso fazer, é alterar os arquivos pra .php, se você não o fizer...
+
+vc pediu 3 paginas, mas fiz 4:
+
+- indexGerenciador.html
+- cadFuncionario.html
+- viewEstacionamentos.html
+- viewFuncionario.html

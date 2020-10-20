@@ -40,6 +40,13 @@
     height: auto;
 }
 
+.column3 {
+    color: black;
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
 .column3 img {
     width: 100%;
     height: auto;
@@ -75,5 +82,8 @@
         width: 100%;
         height: auto;
         padding: 0px;
+    }
+    .column1 #imagem {
+        padding: 20px;
     }
 }
