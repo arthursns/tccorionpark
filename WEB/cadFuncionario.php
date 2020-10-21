@@ -5,6 +5,10 @@ $selectCargos = "SELECT * FROM tb_cargo";
 $exec1 = sqlsrv_query($conn, $selectCargos);
 $cargos = sqlsrv_fetch_array($exec1);
 
+$selectNivelAcesso = "SELECT * FROM tb_nivel_acesso";
+$exec2 = sqlsrv_query($conn, $selectNivelAcesso);
+$nivelAcesso = sqlsrv_fetch_array($exec2);
+
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +49,7 @@ $cargos = sqlsrv_fetch_array($exec1);
         <div class="w3-container w3-padding-large w3-section">
             <h1 class="w3-jumbo">Adicione um novo Funcionário</h1>
             <div class="teste">
-                <form action="" method="">
+                <form action="cadFuncionarioModel.php" method="POST">
                     <label for="fname">Nome</label>
                     <input type="text" id="fname" name="nome" placeholder="Nome">
                     <label for="email">Email</label>
@@ -58,12 +62,22 @@ $cargos = sqlsrv_fetch_array($exec1);
                         <option value="<?php echo $cargos['id_cargo']; ?>">
                             <?php echo $cargos['descricao']; ?>
                         </option>
-                    </select><br>
+                    </select>
                     <a href="cadCargo.php">Não encontrou o cargo? Clique aqui para cadastra-lo</a>
-
-
-                  </select>
-
+                    <h1>Conta para acesso ao Gerenciador</h1>
+                    <label>Usuario</label>
+                    <input type="text" id="fname" name="usuario" placeholder="Usuário" maxlength="255">
+                    <label>Senha</label>
+                    <br>
+                    <input type="password" id="fname" name="senha" placeholder="Senha">
+                    <br>
+                    <label>Nível de Acesso</label>
+                    <select name="nivelAcesso" id="nivelAcesso">
+                        <option value="">Selecione um Nível de Acesso</option>
+                        <option value="<?php echo $nivelAcesso['id_nivel_acesso']; ?>">
+                            <?php echo $nivelAcesso['descricao']; ?>
+                        </option>
+                    </select>
                     <input type="submit" value="Cadastrar">
                 </form>
             </div>

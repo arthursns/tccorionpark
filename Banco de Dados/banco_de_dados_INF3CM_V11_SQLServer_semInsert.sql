@@ -45,14 +45,13 @@ references tb_cliente_estacionamento (id_cli2)
 go
 create table tb_nivel_acesso(
 id_nivel_acesso int identity primary key not null,
-valor int not null,
 descricao varchar(100) not null
 );
 -- Niveis de acesso pré-definidos
 INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (1, 'Administrador');
-INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (2, 'Gerente');
-INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (3, 'Manobrista');
-INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (1, 'Atendente');
+INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (2, 'Acesso completo');
+INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (3, 'Controle Entrada e Saída');
+INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (1, 'Suporte');
 go
 create table tb_login(
 id_login  int identity primary key not null,
