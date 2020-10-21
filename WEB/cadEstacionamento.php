@@ -74,7 +74,7 @@
                 <input type="password" name="senha" placeholder="Senha">
                 <input type="text" name="telefoneUsuario" placeholder="Telefone">
 
-                <button type="submit">Criar</button>
+                <button type="submit">Cadastrar</button>
 
                 <p class="message">Ja está registrado? <a href="loginEstacionamento.php">Entrar</a></p>
                 <p class="message"><a href="index.html">Voltar ao ínicio</a></p>

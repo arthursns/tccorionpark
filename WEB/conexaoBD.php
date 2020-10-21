@@ -1,5 +1,5 @@
 <?php
-$serverName = "DESKTOP-12528G0\\SQLEXPRESS01"; //NomeDoServidor\\NomeDoBanco  Alterar isso antes de tentar rodar!!!!!!!!!!
+$serverName = "DESKTOP-HIAOB1Q\\SQLEXPRESS"; //NomeDoServidor\\NomeDoBanco  Alterar isso antes de tentar rodar!!!!!!!!!!
 
 //Conexão com o banco utilizando o usuário do Windows
 $connectionInfo = array( "Database"=>"ESTACIONAMENTO_INF3CM");

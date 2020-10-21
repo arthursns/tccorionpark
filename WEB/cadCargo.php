@@ -1,15 +1,6 @@
-<?php 
-include("conexaoBD.php");
-
-$selectCargos = "SELECT * FROM tb_cargo";
-$exec1 = sqlsrv_query($conn, $selectCargos);
-$cargos = sqlsrv_fetch_array($exec1);
-
-?>
-
 <!DOCTYPE html>
 <html>
-<title>Cadastro Funcionário</title>
+<title>Cadastro Cargo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/ver.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -43,27 +34,11 @@ $cargos = sqlsrv_fetch_array($exec1);
             <h1 class="w3-xxxlarge w3-padding-16">Cadastro</h1>
         </header>
         <div class="w3-container w3-padding-large w3-section">
-            <h1 class="w3-jumbo">Adicione um novo Funcionário</h1>
+            <h1 class="w3-jumbo">Adicione um novo Cargo</h1>
             <div class="teste">
-                <form action="" method="">
-                    <label for="fname">Nome</label>
-                    <input type="text" id="fname" name="nome" placeholder="Nome">
-                    <label for="email">Email</label>
-                    <input type="text" id="lname" name="email" placeholder="Email">
-                    <label>Telefone</label>
-                    <input type="text" id="fname" name="telefone" placeholder="Telefone" maxlength="11">
-                    <label>Cargo</label>
-                    <select name="cargo" id="cargo">
-                        <option value="">Selecione um cargo</option>
-                        <option value="<?php echo $cargos['id_cargo']; ?>">
-                            <?php echo $cargos['descricao']; ?>
-                        </option>
-                    </select><br>
-                    <a href="cadCargo.php">Não encontrou o cargo? Clique aqui para cadastra-lo</a>
-
-
-                  </select>
-
+                <form action="cadCargoModel.php" method="Post">
+                    <label for="fname">Descrição</label>
+                    <input type="text" id="fname" name="descricao" placeholder="Nome">
                     <input type="submit" value="Cadastrar">
                 </form>
             </div>
