@@ -41,11 +41,6 @@
                     <input type="text" id="fname" name="firstname" placeholder="Nome">
                     <label for="email">Email</label>
                     <input type="text" id="lname" name="lastname" placeholder="Email">
-                    <label for="estacionamento">Estacionamento</label>
-                    <select id="estacionamento" name="estacionamento">
-                    <option value="estacy">Estacy 24h</option>
-                    <option value="pandora">Pandora Park</option>
-                    <option value="zeus">Zeus Estacionamento</option>
                   </select>
 
                     <input type="submit" value="Cadastrar">

@@ -48,8 +48,11 @@ id_nivel_acesso int identity primary key not null,
 valor int not null,
 descricao varchar(100) not null
 );
--- Nivel de acesso pré-definido
+-- Niveis de acesso pré-definidos
 INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (1, 'Administrador');
+INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (2, 'Gerente');
+INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (3, 'Manobrista');
+INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (1, 'Atendente');
 go
 create table tb_login(
 id_login  int identity primary key not null,
