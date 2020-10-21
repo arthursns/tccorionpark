@@ -50,12 +50,13 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
             <h1 class="w3-jumbo">Adicione um novo Funcionário</h1>
             <div class="teste">
                 <form action="cadFuncionarioModel.php" method="POST">
+                    <h1>Dados Pessoais</h1>
                     <label for="fname">Nome</label>
-                    <input type="text" id="fname" name="nome" placeholder="Nome">
+                    <input type="text" id="fname" name="nome" placeholder="Nome" maxlength="255">
                     <label for="email">Email</label>
-                    <input type="text" id="lname" name="email" placeholder="Email">
+                    <input type="text" id="lname" name="email" placeholder="Email" maxlength="100">
                     <label>Telefone</label>
-                    <input type="text" id="fname" name="telefone" placeholder="Telefone" maxlength="11">
+                    <input type="text" id="fname" name="telefone" placeholder="DDD + Telefone Ex: (12934567890)" maxlength="11">
                     <label>Cargo</label>
                     <select name="cargo" id="cargo">
                         <option value="">Selecione um cargo</option>
@@ -70,6 +71,7 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
                     <label>Senha</label>
                     <br>
                     <input type="password" id="fname" name="senha" placeholder="Senha">
+                    <br>
                     <br>
                     <label>Nível de Acesso</label>
                     <select name="nivelAcesso" id="nivelAcesso">
