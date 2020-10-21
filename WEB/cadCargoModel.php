@@ -10,7 +10,7 @@ if ($exec1 === false) {
 }else{
 	echo "<script>
 	alert('Cargo cadastrado com sucesso!');
-	windows.location='cadCargo.php';
+	window.location='cadCargo.php'
 	</script>";
 }
 ?>
