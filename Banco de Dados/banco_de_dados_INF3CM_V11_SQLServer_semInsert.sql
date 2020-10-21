@@ -18,7 +18,7 @@ rua varchar(100) not null
 go
 create table tb_telefone (
 id_telefone int identity primary key not null,
-numero varchar(14) not null,
+numero varchar(11) not null,
 
 );
 go
