@@ -1,4 +1,4 @@
-]<?php
+<?php
 include ("conexaoBD.php");
 
 $selectEstacionamentos = "SELECT a.razao_social, b.cidade, (SELECT COUNT(c.id_vaga) FROM tb_vaga c WHERE c.id_cli2 = a.id_cli2) AS quantidadeVagas FROM tb_cliente_estacionamento a, tb_endereco b";
