@@ -62,34 +62,15 @@
             <i class="fa fa-bars"></i>
         </a>
         <a href="indexGerenciador.php">Início</a>
-        <a class="active"href="viewEstacionamento.php">Estacionamento</a>
+        <a href="viewEstacionamento.php">Estacionamento</a>
         <a href="viewFuncionario.php">Funcionário</a>
-        <a href="viewVagas.php">Vagas</a>
+        <a class="active"href="viewVagas.php">Vagas</a>
         <a  href="viewCupons.php">Cupons</a>
         <a  href="viewControle.php">Controle de Entrada e Saída</a>
         <a href="viewReserva.php">Reserva</a>
         <a href="#">Sair</a>
     </div>
 
-    <div class="content">
-        <h2>Visão geral do Estacionamento</h2>
-    </div>
-    <div class="content">
-        <table id="customers">
-            <tr>
-                <th>Nome</th>
-                <th>Horário de funcionamento</th>
-                <th>Endereço</th>
-                <th>Status</th>
-            </tr>
-            <tr>
-                <td>Orion Park</td>
-                <td>08:00-18:00</td>
-                <td>Aberto</td>
-                <td>Germany</td>
-            </tr>
-        </table>
-    </div>
     <div class="content">
         <h2>Vagas</h2>
         <table id="customers">
@@ -137,43 +118,7 @@
             </tr>
         </table>
     </div>
-
     <div class="content">
-        <h2>Lista de Funcionários</h2>
-        <table id="customers">
-            <tr>
-                <th>Nome</th>
-                <th>Nível de acesso</th>
-                <th>Idade</th>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td><select name="nivelAcesso" id="">
-                    <option value="Adm">Adm</option>
-                    <option value="Gerente">Gerente</option>
-                    <option value="Funcionário">Funcionário</option>
-                </select></td>
-                <td>19</td>
-            </tr>
-            <tr>
-                <td>Edson Arantes do Nascimento, vulgo pelé</td>
-                <td><select name="nivelAcesso" id="">
-                    <option value="Adm">Adm</option>
-                    <option value="Gerente">Gerente</option>
-                    <option value="Funcionário">Funcionário</option>
-                </select></td>
-                <td>82</td>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td><select name="nivelAcesso" id="">
-                    <option value="Adm">Adm</option>
-                    <option value="Gerente">Gerente</option>
-                    <option value="Funcionário">Funcionário</option>
-                </select></td>
-                <td>19</td>
-            </tr>
-        </table>
     </div>
     <script>
         function myFunction() {

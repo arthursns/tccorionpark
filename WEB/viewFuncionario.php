@@ -62,8 +62,8 @@
             <i class="fa fa-bars"></i>
         </a>
         <a href="indexGerenciador.php">Início</a>
-        <a class="active"href="viewEstacionamento.php">Estacionamento</a>
-        <a href="viewFuncionario.php">Funcionário</a>
+        <a href="viewEstacionamento.php">Estacionamento</a>
+        <a class="active"href="viewFuncionario.php">Funcionário</a>
         <a href="viewVagas.php">Vagas</a>
         <a  href="viewCupons.php">Cupons</a>
         <a  href="viewControle.php">Controle de Entrada e Saída</a>
@@ -71,75 +71,12 @@
         <a href="#">Sair</a>
     </div>
 
-    <div class="content">
-        <h2>Visão geral do Estacionamento</h2>
+    <div class="content" style="padding-top: 30px;">
+        <a style="text-decoration: none; color: white; background-color: black; padding: 10px 10px; position: relative; top: 15px; float: right; border-radius: 5px;" href="cadFuncionario.html">Cadastro</a>
+        <h2>Lista de funcionários</h2>
+        <!-- <a style="text-decoration: none; color: white; background-color: black; padding: 5px 10px; position: relative; top: 0px; float: right; " href="cadFuncionario.html">Cadastro</a> -->
     </div>
     <div class="content">
-        <table id="customers">
-            <tr>
-                <th>Nome</th>
-                <th>Horário de funcionamento</th>
-                <th>Endereço</th>
-                <th>Status</th>
-            </tr>
-            <tr>
-                <td>Orion Park</td>
-                <td>08:00-18:00</td>
-                <td>Aberto</td>
-                <td>Germany</td>
-            </tr>
-        </table>
-    </div>
-    <div class="content">
-        <h2>Vagas</h2>
-        <table id="customers">
-            <tr>
-                <th>Vaga</th>
-                <th>Status</th>
-                <th>Carro</th>
-                <th>Tipo de vaga</th>
-            </tr>
-            <tr>
-                <td>01-A</td>
-                <td><select name="Status" id="">
-                    <option value="Ocupada">Ocupada</option>
-                    <option value="Livre">Livre</option>
-                </select></td>
-                <td>Fox - GTX-3080</td>
-                <td>Normal</td>
-            </tr>
-            <tr>
-                <td>01-B</td>
-                <td><select name="Status" id="">
-                    <option value="Ocupada">Ocupada</option>
-                    <option value="Livre">Livre</option>
-                </select></td>
-                <td>(se tiver ocupado, o carro aparece aqui, se n fica branco)</td>
-                <td>Deficiente</td>
-            </tr>
-            <tr>
-                <td>01-C</td>
-                <td><select name="Status" id="">
-                    <option value="Ocupada">Ocupada</option>
-                    <option value="Livre">Livre</option>
-                </select></td>
-                <td>Saveiro - 666-7777</td>
-                <td>Deficiente</td>
-            </tr>
-            <tr>
-                <td>02-A</td>
-                <td><select name="Status" id="">
-                    <option value="Ocupada">Ocupada</option>
-                    <option value="Livre">Livre</option>
-                </select></td>
-                <td></td>
-                <td>Normal</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="content">
-        <h2>Lista de Funcionários</h2>
         <table id="customers">
             <tr>
                 <th>Nome</th>

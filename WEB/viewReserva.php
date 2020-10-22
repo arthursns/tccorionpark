@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/sistema.css">
+    <link rel="stylesheet" href="css/viewEstacionamento.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -61,36 +61,20 @@
         <a href="javascript:void(0);" class="icone" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
-        <a class="active" href="indexGerenciador.php">Início</a>
+        <a href="indexGerenciador.php">Início</a>
         <a href="viewEstacionamento.php">Estacionamento</a>
         <a href="viewFuncionario.php">Funcionário</a>
         <a href="viewVagas.php">Vagas</a>
-        <a href="viewCupons.php">Cupons</a>
-        <a href="viewControle.php">Controle de Entrada e Saída</a>
-        <a href="viewReserva.php">Reserva</a>
+        <a  href="viewCupons.php">Cupons</a>
+        <a  href="viewControle.php">Controle de Entrada e Saída</a>
+        <a class="active"href="viewReserva.php">Reserva</a>
         <a href="#">Sair</a>
     </div>
 
-    <div class="contentindex">
-        <div class="row">
-            <h2>Bem vindo @user.</h2>
-        </div>
-    </div>
-
     <div class="content">
-        <div class="rowconteudo" style="
-        border: 1px solid rgba(128, 128, 128, 0.158);">
-            <h2>Titulo de alguma coisa</h2>
-            <div class="rowconteudo">
-                <p>Aqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia ainda</p>
-            </div>
-            <div class="rowconteudo">
-                <p>Aqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia ainda</p>
-            </div>
-            <div class="rowconteudo">
-                <p>Aqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia ainda</p>
-            </div>
-        </div>
+        <h2>Reserva</h2>
+    </div>
+    <div class="content">
     </div>
     <script>
         function myFunction() {
