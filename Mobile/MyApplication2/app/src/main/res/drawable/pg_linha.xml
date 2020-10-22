@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- cor da borda -->
+    <item>
+        <shape>
+            <solid android:color="F7CE3E" />
+        </shape>
+    </item>
+
+    <!-- cor de fundo, tamanho somente da borda inferior -->
+    <item android:bottom="10dp">
+        <shape>
+            <solid android:color="f7CE3E" />
+        </shape>
+    </item>
+</layer-list>

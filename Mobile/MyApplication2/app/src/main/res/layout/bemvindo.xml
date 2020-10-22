@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="468dp"
+        android:layout_height="371dp"
+        tools:layout_editor_absoluteX="-31dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="217dp"
+        android:layout_height="85dp"
+        android:background="#00000000"
+        android:text="BEM VINDO AO ORION PARK"
+        android:textColor="#F7CE3E"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="116dp"
+        android:layout_height="83dp"
+        app:srcCompat="@drawable/p1"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="13dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="62dp"
+        android:layout_height="57dp"
+        app:srcCompat="@drawable/p2"
+        tools:layout_editor_absoluteX="297dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="96dp"
+        android:layout_height="78dp"
+        app:srcCompat="@drawable/p3"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="369dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="149dp"
+        android:layout_height="122dp"
+        app:srcCompat="@drawable/p4"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="611dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="234dp"
+        android:layout_height="35dp"
+        android:background="#919191"
+        android:text="INSIRA O ENDEREÇO"
+        android:textColor="#F7CE3E"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="227dp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- pararhoraH"
+        android:textColor="#F7CE3E"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="553dp" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- ParkAlpha"
+        android:textColor="#F7CE3E"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="471dp" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="174dp"
+        android:layout_height="54dp"
+        android:text="FAVORITOS"
+        android:textColor="#F7CE3E"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="379dp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- estacione aqui"
+        android:textColor="#F7CE3E"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="508dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

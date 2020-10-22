@@ -1,23 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="113dp"
+        android:layout_height="41dp"
+        android:background="#F7CE3E"
+        android:text="ALTERAR"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="247dp"
+        tools:layout_editor_absoluteY="644dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="399dp"
+        android:layout_height="9dp"
+        android:background="@drawable/shape2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="394dp" />
+
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="seus carros"
-        tools:layout_editor_absoluteX="118dp"
+        android:layout_width="187dp"
+        android:layout_height="44dp"
+        android:text="SEUS DADOS"
+        android:textColor="#F7CE3E"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="38dp"
         tools:layout_editor_absoluteY="73dp" />
 
     <TextView
         android:id="@+id/textView14"
+        android:layout_width="204dp"
+        android:layout_height="41dp"
+        android:text="SEUS CARROS"
+        android:textColor="#F7CE3E"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="49dp"
+        android:layout_height="23dp"
+        android:text="NOME"
+        android:textColor="#F7CE3E"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="48dp"
+        android:layout_height="23dp"
+        android:text="EMAIL"
+        android:textColor="#F7CE3E"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="214dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="37dp"
+        android:layout_height="24dp"
+        android:text="CPF"
+        android:textColor="#F7CE3E"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <TextView
+        android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="401dp" />
+        android:text="SENHA"
+        android:textColor="#F7CE3E"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COR"
+        android:textColor="#F7CE3E"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="529dp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MODELOS"
+        android:textColor="#F7CE3E"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="613dp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MARCA"
+        android:textColor="#F7CE3E"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLACAS"
+        android:textColor="#F7CE3E"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="488dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="125dp"
+        android:layout_height="110dp"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="53dp"
+        tools:srcCompat="@drawable/icone_usuario2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="97dp"
+        android:layout_height="93dp"
+        tools:layout_editor_absoluteX="263dp"
+        tools:layout_editor_absoluteY="412dp"
+        tools:srcCompat="@drawable/carro" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
