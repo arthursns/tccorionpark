@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php 
 include("conexaoBD.php");
 
@@ -114,4 +112,3 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
 </body>
 
 </html>
->>>>>>> 0f329b1d45b1fa4c7271154438387467974b710d
