@@ -37,7 +37,7 @@ references tb_telefone (id_telefone),
 go
 create table tb_vaga(
 id_vaga int identity primary key not null,
-valor decimal not null,
+valor smallmoney not null,
 status_vaga bit,
 id_cli2 int not null,
 constraint fk_cli2_vaga foreign key(id_cli2)
@@ -116,14 +116,17 @@ nome_forma_pagamento varchar(255) not null
 go
 create table tb_pagamento(
 id_pagamento int identity primary key not null,
-valor decimal not null,
+valor smallmoney not null,
 status_pagamento bit,
 id_forma_pagamento int not null,
 constraint  fk_forma_pagamento foreign key(id_forma_pagamento)
 references tb_forma_de_pagamento (id_forma_pagamento),
 id_reserva int  not null,
 constraint fk_reserva foreign key(id_reserva)
-references tb_reserva (id_reserva)
+references tb_reserva (id_reserva),
+id_cupom int,
+constraint fk_pagamento_cupom foreign key(id_cupom)
+references tb_cupom (id_cupom)
 );
 go
 create table tb_marca(
@@ -168,10 +171,13 @@ references tb_reserva (id_reserva)
 go
 create table tb_cupons (
 id_cupom int identity primary key not null,
-valor int not null, -- reserva e estacionamento
-id_pagamento int not null,
-constraint fk_pagamento_cupom foreign key (id_pagamento)
-references tb_pagamento (id_pagamento));
+valor smallmoney not null, -- reserva e estacionamento
+descricao varchar(255),
+status_cupons bit
+id_cli2 int not null,
+constraint fk_cupons_estacionamento foreign key (id_cli2)
+references tb_cliente_estacionamento (id_cli2)
+);
 go
 create table tb_avaliacao (
 id_avaliacao int identity primary key not null,

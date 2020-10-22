@@ -1,3 +1,15 @@
+<?php
+include("conexaoBD.php");
+
+session_start();
+
+$selectCupons = "SELECT * FROM tb_cupons WHERE id_cli2 = '$_SESSION['id_cli2']'";
+$exec1 = sqlsrv_query($conn, $selectCupons);
+if ($exec1 === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+$dado = sqlsrv_fetch_array($exec1);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -73,8 +85,20 @@
 
     <div class="content">
         <h2>Cupons</h2>
-    </div>
-    <div class="content">
+        <table id="customers">
+            <tr>
+                <th>ID</th>
+                <th>Status</th>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <th><?php echo $dado['id_cupom']?></th>
+                <th><?php echo $dado['status_cupons']?></th>
+                <th><?php echo $dado['valor']?></th>
+                <th><?php echo $dado['descricao']?></th>
+            </tr>
+        </table>
     </div>
     <script>
         function myFunction() {
