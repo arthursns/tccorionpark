@@ -45,3 +45,7 @@ input[type=submit]:hover {
     background-color: #f2f2f2;
     padding: 20px;
 }
+
+table {
+    padding: 10px;
+}

@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: #F7CE3E;
+    color: black;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.content {
+    background-color: #eeeeee;
+    margin-right: 20px;
+    padding: 1px 16px;
+    height: auto;
+    margin-left: 220px;
+}
+
+.content .est {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+    }
+    .sidebar a {
+        right: 0%;
+    }
+    div.content {
+        margin-left: 0;
+    }
+    div.content {
+        background-color: #eeeeee;
+        margin-left: 1vh;
+        margin-right: 1vh;
+        padding: 1px 16px;
+        height: auto;
+    }
+    .content .est {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .rowconteudo {
+        margin-right: 0%;
+        padding: 1px 30px;
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td,
+#customers th,
+#customers select {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers select {
+    width: 100%;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #F7CE3E;
+    color: black;
+}
