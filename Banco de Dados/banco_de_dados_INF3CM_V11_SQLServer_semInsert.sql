@@ -38,6 +38,7 @@ go
 create table tb_vaga(
 id_vaga int identity primary key not null,
 valor decimal not null,
+status_vaga bit,
 id_cli2 int not null,
 constraint fk_cli2_vaga foreign key(id_cli2)
 references tb_cliente_estacionamento (id_cli2)
@@ -116,6 +117,7 @@ go
 create table tb_pagamento(
 id_pagamento int identity primary key not null,
 valor decimal not null,
+status_pagamento bit,
 id_forma_pagamento int not null,
 constraint  fk_forma_pagamento foreign key(id_forma_pagamento)
 references tb_forma_de_pagamento (id_forma_pagamento),
@@ -167,13 +169,9 @@ go
 create table tb_cupons (
 id_cupom int identity primary key not null,
 valor int not null, -- reserva e estacionamento
-id_reserva int not null,
-constraint fk_reserva_cupom foreign key(id_reserva)
-references tb_reserva (id_reserva),
-id_controle int not null,
-constraint fk_cupons_entrada foreign key(id_controle)
-references tb_entrada_controle_saida (id_controle)
-);
+id_pagamento int not null,
+constraint fk_pagamento_cupom foreign key (id_pagamento)
+references tb_pagamento (id_pagamento));
 go
 create table tb_avaliacao (
 id_avaliacao int identity primary key not null,
@@ -188,8 +186,10 @@ references tb_entrada_controle_saida (id_controle)
 create table tb_contato (
 id_contato int primary key not null, 
 email_contato varchar(40),
- msg_contato varchar (255),
- id_responsavel int not null,
+msg_contato varchar(255),
+msg_resposta_responsavel varchar(255),
+id_responsavel int,
+status_contato bit,
 constraint fk_contato_respon foreign key(id_responsavel)
 references tb_responsavel (id_responsavel)
 

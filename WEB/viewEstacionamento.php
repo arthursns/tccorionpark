@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 include ("conexaoBD.php");
 
@@ -14,7 +12,6 @@ if ($exec1 === false) {
 $dado = sqlsrv_fetch_array($exec1);
 $numEstacionamentos = sqlsrv_num_rows($exec1);
 ?>
->>>>>>> 0f329b1d45b1fa4c7271154438387467974b710d
 <!DOCTYPE html>
 <html>
 
