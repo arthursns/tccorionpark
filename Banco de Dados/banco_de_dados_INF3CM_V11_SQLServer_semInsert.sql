@@ -49,10 +49,10 @@ id_nivel_acesso int identity primary key not null,
 descricao varchar(100) not null
 );
 -- Niveis de acesso pré-definidos
-INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (1, 'Administrador');
-INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (2, 'Acesso completo');
-INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (3, 'Controle Entrada e Saída');
-INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (1, 'Suporte');
+--INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (1, 'Administrador');--
+--INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (2, 'Acesso completo');
+--INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (3, 'Controle Entrada e Saída');
+--INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (1, 'Suporte');
 go
 create table tb_login(
 id_login  int identity primary key not null,
@@ -114,6 +114,16 @@ id_forma_pagamento int identity primary key not null,
 nome_forma_pagamento varchar(255) not null
 );
 go
+
+create table tb_cupons (
+id_cupom int identity primary key not null,
+valor smallmoney not null, -- reserva e estacionamento
+descricao varchar(255),
+status_cupons bit,
+id_cli2 int not null,
+constraint fk_cupons_estacionamento foreign key (id_cli2)
+references tb_cliente_estacionamento (id_cli2)
+);
 create table tb_pagamento(
 id_pagamento int identity primary key not null,
 valor smallmoney not null,
@@ -126,7 +136,7 @@ constraint fk_reserva foreign key(id_reserva)
 references tb_reserva (id_reserva),
 id_cupom int,
 constraint fk_pagamento_cupom foreign key(id_cupom)
-references tb_cupom (id_cupom)
+references tb_cupons (id_cupom)
 );
 go
 create table tb_marca(
@@ -169,15 +179,7 @@ constraint fk_reserva_entrada foreign key(id_reserva)
 references tb_reserva (id_reserva)
 );
 go
-create table tb_cupons (
-id_cupom int identity primary key not null,
-valor smallmoney not null, -- reserva e estacionamento
-descricao varchar(255),
-status_cupons bit
-id_cli2 int not null,
-constraint fk_cupons_estacionamento foreign key (id_cli2)
-references tb_cliente_estacionamento (id_cli2)
-);
+
 go
 create table tb_avaliacao (
 id_avaliacao int identity primary key not null,
