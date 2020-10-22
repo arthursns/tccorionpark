@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<?php
+include ("conexaoBD.php");
+
+$selectEstacionamentos = "SELECT a.razao_social, b.cidade, (SELECT COUNT(c.id_vaga) FROM tb_vaga c WHERE c.id_cli2 = a.id_cli2) AS quantidadeVagas FROM tb_cliente_estacionamento a, tb_endereco b";
+$params = array();
+$options =  array( 'Scrollable' => SQLSRV_CURSOR_KEYSET );
+
+$exec1 = sqlsrv_query($conn, $selectEstacionamentos, $params, $options);
+if ($exec1 === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+$dado = sqlsrv_fetch_array($exec1);
+$numEstacionamentos = sqlsrv_num_rows($exec1);
+?>
+>>>>>>> 0f329b1d45b1fa4c7271154438387467974b710d
 <!DOCTYPE html>
 <html>
 

@@ -1,6 +1,12 @@
 <?php
+<<<<<<< HEAD
 //$serverName = "DESKTOP-HIAOB1Q\\SQLEXPRESS"; //NomeDoServidor\\NomeDoBanco  Alterar isso antes de tentar rodar!!!!!!!!!!
 $serverName = "DESKTOP-9LK3UQP\\SQLEXPRESS01"; //NomeDoServidor\\NomeDoBanco  Alterar isso antes de tentar rodar!!!!!!!!!!
+=======
+//$serverName = "DESKTOP-HIAOB1Q\\SQLEXPRESS";//NomeDoServidor\\NomeDoBanco  Alterar isso antes de tentar rodar!!!!!!!!!!
+$serverName = "DESKTOP-12528G0\\SQLEXPRESS01";
+
+>>>>>>> 0f329b1d45b1fa4c7271154438387467974b710d
 //Conexão com o banco utilizando o usuário do Windows
 $connectionInfo = array( "Database"=>"ESTACIONAMENTO_INF3CM");
 $conn = sqlsrv_connect( $serverName, $connectionInfo);
