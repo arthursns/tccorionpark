@@ -49,10 +49,10 @@ id_nivel_acesso int identity primary key not null,
 descricao varchar(100) not null
 );
 -- Niveis de acesso pré-definidos
-INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (1, 'Administrador');
-INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (2, 'Acesso completo');
-INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (3, 'Controle Entrada e Saída');
-INSERT INTO tb_nivel_acesso (valor, descricao) VALUES (1, 'Suporte');
+INSERT INTO tb_nivel_acesso (descricao) VALUES ('Administrador');
+INSERT INTO tb_nivel_acesso (descricao) VALUES ('Acesso completo');
+INSERT INTO tb_nivel_acesso (descricao) VALUES ('Controle Entrada e Saída');
+INSERT INTO tb_nivel_acesso (descricao) VALUES ('Suporte');
 go
 create table tb_login(
 id_login  int identity primary key not null,
@@ -192,9 +192,9 @@ constraint fk_avaliacao_entrada foreign key(id_controle)
 references tb_entrada_controle_saida (id_controle)
 );
 create table tb_contato (
-id_contato int primary key not null, 
-email_contato varchar(40),
-msg_contato varchar(255),
+id_contato int identity primary key not null, 
+email_contato varchar(40) not null,
+msg_contato varchar(255) not null,
 msg_resposta_responsavel varchar(255),
 id_responsavel int,
 status_contato bit,

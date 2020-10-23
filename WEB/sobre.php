@@ -234,19 +234,19 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
                         <div class="right box">
                             <h2>Contate-nos</h2>
                             <div class="content">
-                                <form action="#">
-                                    <div class="email">
-                                        <div class="text">Email:</div>
-                                        <input type="email" required>
-                                    </div>
-                                    <div class="msg">
-                                        <div class="text">Mensagem:</div>
-                                        <textarea cols="25" rows="2" required></textarea>
-                                    </div>
-                                    <div class="btn">
-                                        <button type="submit">Enviar</button>
-                                    </div>
-                                </form>
+                                <form action="contatoModel.php" method="POST">
+                                        <div class="email">
+                                            <div class="text">Email:</div>
+                                            <input name="email_contato" type="email" required>
+                                        </div>
+                                        <div class="msg">
+                                            <div class="text">Mensagem:</div>
+                                            <textarea name="msg_contato" cols="25" rows="2" required></textarea>
+                                        </div>
+                                        <div class="btn">
+                                            <button type="submit">Enviar</button>
+                                        </div>
+                                    </form>
                             </div>
                         </div>
                     </div>
