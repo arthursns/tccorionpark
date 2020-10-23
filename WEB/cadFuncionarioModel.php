@@ -43,7 +43,7 @@ function idTemp($queryID) {
 			die(print_r(sqlsrv_errors(), true));
 		}else{
 			echo "<script>
-			alert('Funcionário cadastrado com sucesso!'); windows.localtion='viewFuncionario.php';
+			alert('Funcionário cadastrado com sucesso!'); window.location='viewFuncionario.php';
 			</script>";
 		}
 ?>

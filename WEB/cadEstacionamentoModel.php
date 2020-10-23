@@ -127,7 +127,7 @@ if ($exec7 === false) {
 	die(print_r(sqlsrv_errors(), true));
 }else{
 	echo "<script>
-	alert('Estacionamento cadastrado com sucesso!'); windows.localtion='loginEstacionamento.php';
+	alert('Estacionamento cadastrado com sucesso!'); window.location='loginEstacionamento.php';
 	</script>";
 }
 ?>
