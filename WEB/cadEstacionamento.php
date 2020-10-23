@@ -2,12 +2,14 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
     <link rel="icon" type="image/icon" href="img/logo.ico" />
     <title>Cadastro</title>
-    <link rel="stylesheet" href="css/cad.css?ts=<?=time()?>">
-    <link rel="stylesheet" href="css/style.css?ts=<?=time()?>">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/cad.css?ts=<?=time()?>"/>
+    <link rel="stylesheet" href="css/style.css?ts=<?=time()?>"/>
+    <script src="js/JQuery.js" type="text/javascript" ></script>
+    <script src="js/mask.js" type="text/javascript" ></script>
+    <script src="js/script.js" type="text/javascript" ></script>
 </head>
 
 <!-- 
@@ -25,8 +27,8 @@
                     <label class="orion" for="" style="color: black;">Dados do Estacionamento:</label>
                     <input type="text" name="nome_fantasia" placeholder="Nome Fantasia">
                     <input type="text" name="razao_social" placeholder="Razão Social">
-                    <input type="text" name="cnpj" placeholder="CNPJ">
-                    <input type="text" name="telefoneEstacionamento" placeholder="Telefone">
+                    <input type="text" name="cnpj" placeholder="CNPJ" id="cnpj" class="cnpj">
+                    <input type="text" name="telefoneEstacionamento" placeholder="Telefone" id="telefoneEstacionamento">
 
                     <label class="orion" for="" style="color: black;">Endereço:</label>
                     <input type="text" name="rua" placeholder="Rua">
@@ -60,9 +62,9 @@
 						<option value="SP">São Paulo</option>
 						<option value="SE">Sergipe</option>
 						<option value="TO">Tocantins</option>
-                <input type="number" name="numero" placeholder="Número">
-                <input type="text" name="complemento" placeholder="Complemento">
 					</select>
+                    <input type="text" name="numero" placeholder="Número" id="numero">
+                    <input type="text" name="complemento" placeholder="Complemento">
             </div>
             <div class="right box">
                 <label class="orion" for="" style="color: black;">Administrador:</label>
@@ -72,7 +74,7 @@
                 <input type="text" name="cargo" placeholder="Cargo">
                 <input type="text" name="usuario" placeholder="Usuário">
                 <input type="password" name="senha" placeholder="Senha">
-                <input type="text" name="telefoneUsuario" placeholder="Telefone">
+                <input type="text" name="telefoneUsuario" placeholder="Telefone" id="telefoneUsuario">
 
                 <button type="submit">Cadastrar</button>
 
