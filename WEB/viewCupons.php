@@ -14,6 +14,7 @@ $dado = sqlsrv_fetch_array($exec1);
 <html>
 
 <head>
+<title>Cupons</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/viewEstacionamento.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
