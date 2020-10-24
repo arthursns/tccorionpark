@@ -126,15 +126,16 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
             </div>
             <div class="rightcolumn">
                 <div class="card">
-                    <h2>Atualmente, temos: <?php
+                    <h2>Atualmente, temos <?php
                                             echo $numEstacionamentos;
                                             if ($numEstacionamentos = 1) {
-                                                echo " estacionamentos";
+                                                echo " estacionamento";
                                             } else {
                                                 echo " estacionamentos";
                                             }
-                                            ?></h2>
+                                            ?>
                     cadastrados conosco, segue a lista deles:
+                </h2>
                     <div>
                         <table>
                             <tr>
