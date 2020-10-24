@@ -17,8 +17,8 @@
 
 
     <div class="topnav" id="navzao">
-        <a href="index.html" class="active">Início</a>
-        <a href="app.html">Aplicativo</a>
+        <a href="index.php" class="active">Início</a>
+        <a href="app.php">Aplicativo</a>
         <a href="sobre.php">Sobre</a>
         <a href="cadEstacionamento.php" class="cad">Cadastro</a>
         <a href="loginEstacionamento.php" class="cad">Login</a>
@@ -96,7 +96,7 @@
                 <div class="card">
                     <h2>Aplicativo Mobile</h2>
                     <p>O novo jeito de encontrar o estacionamento mais próximo ao seu veiculo, sem perder tempo procurando vagas, e perdendo horário de seus compromissos. Conheça o Orion...</p>
-                    <a href="app.html">
+                    <a href="app.php">
                         <div class="ver">ver mais...
                         </div>
                     </a>

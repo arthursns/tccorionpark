@@ -72,8 +72,8 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
 <body>
 
     <div class="topnav" id="navzao">
-        <a href="index.html">Início</a>
-        <a href="app.html">Aplicativo</a>
+        <a href="index.php">Início</a>
+        <a href="app.php">Aplicativo</a>
         <a href="sobre.php" class="active">Sobre</a>
         <a href="cadEstacionamento.php" class="cad">Cadastro</a>
         <a href="loginEstacionamento.php" class="cad">Login</a>
@@ -141,28 +141,6 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
                                 <th>Nome fantasia</th>
                                 <th>Número de vagas</th>
                                 <th>Cidade</th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <?php echo $dado['razao_social']; ?>
-                                </th>
-                                <th>
-                                    <?php echo $dado['quantidadeVagas']; ?>
-                                </th>
-                                <th>
-                                    <?php echo $dado['cidade']; ?>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <?php echo $dado['razao_social']; ?>
-                                </th>
-                                <th>
-                                    <?php echo $dado['quantidadeVagas']; ?>
-                                </th>
-                                <th>
-                                    <?php echo $dado['cidade']; ?>
-                                </th>
                             </tr>
                             <tr>
                                 <th>

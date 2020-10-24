@@ -23,8 +23,8 @@
 
 
     <div class="topnav" id="navzao">
-        <a href="index.html">Início</a>
-        <a href="app.html" class="active">Aplicativo</a>
+        <a href="index.php">Início</a>
+        <a href="app.php" class="active">Aplicativo</a>
         <a href="sobre.php">Sobre</a>
         <a href="cadEstacionamento.php" class="cad">Cadastro</a>
         <a href="loginEstacionamento.php" class="cad">Login</a>

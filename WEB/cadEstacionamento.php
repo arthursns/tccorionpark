@@ -79,7 +79,7 @@
                 <button type="submit">Cadastrar</button>
 
                 <p class="message">Ja está registrado? <a href="loginEstacionamento.php">Entrar</a></p>
-                <p class="message"><a href="index.html">Voltar ao ínicio</a></p>
+                <p class="message"><a href="index.php">Voltar ao ínicio</a></p>
             </div>
             </form>
         </div>
