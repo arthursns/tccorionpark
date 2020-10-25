@@ -95,7 +95,14 @@ $dado = sqlsrv_fetch_array($exec1);
             </tr>
             <tr>
                 <th><?php echo $dado['id_cupom']?></th>
-                <th><?php echo $dado['status_cupons']?></th>
+                <th><?php
+                if ($dado['status_cupons'] = 1) {
+                    echo "Ativo";
+                }else{
+                    echo "Inativo";
+                }
+
+                ?></th>
                 <th><?php echo $dado['valor']?></th>
                 <th><?php echo $dado['descricao']?></th>
             </tr>
