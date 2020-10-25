@@ -3,7 +3,7 @@ include("conexaoBD.php");
 
 session_start();
 
-$selectCupons = "SELECT * FROM tb_cupons WHERE id_cli2 = '$_SESSION['id_cli2']'";
+$selectCupons = "SELECT * FROM tb_cupons WHERE id_cli2 = '$_SESSION[id_cli2]'";
 $exec1 = sqlsrv_query($conn, $selectCupons);
 if ($exec1 === false) {
     die(print_r(sqlsrv_errors(), true));

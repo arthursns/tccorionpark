@@ -36,6 +36,15 @@
         if (count($erro) == 0 || !isset($erro)) {
             echo "<script>alert('Logado com sucesso'); location.href='indexGerenciador.php'</script>";
         }
+        
+        $selectIdCli2 = "SELECT id_cli2 FROM tb_cliente_estacionamento WHERE cnpj LIKE '$_SESSION[cnpj]'";
+        $exec2 = sqlsrv_query($conn, $selectIdCli2);
+        if ($exec2 === false) {
+                     die(print_r(sqlsrv_errors(), true));
+                 }
+        $dadoIdCli2 = sqlsrv_fetch_array($exec2);
+        $_SESSION['id_cli2'] = $dadoIdCli2['id_cli2'];
+
     }
     ?>
 
