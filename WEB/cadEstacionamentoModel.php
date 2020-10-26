@@ -6,8 +6,10 @@ include ("conexaoBD.php");
 		//Dados estacionamento
 		$nome_fantasia = $_POST['nome_fantasia'];
 		$razao_social = $_POST['razao_social'];
-		$cnpj = $_POST['cnpj'];
-		$telefoneEstacionamento = $_POST['telefoneEstacionamento'];
+		$cnpjSemTratar = $_POST['cnpj'];
+		$cnpj = preg_replace('/[^0-9]/', '', $cnpjSemTratar);
+		$telefoneEstacionamentoSemTratar = $_POST['telefoneEstacionamento'];
+		$telefoneEstacionamento = preg_replace('/[^0-9]/', '', $telefoneEstacionamentoSemTratar);
 
 		//Dados endereço do estacionamento
 		$rua = $_POST['rua'];
@@ -22,7 +24,8 @@ include ("conexaoBD.php");
 		$email = $_POST['email'];
 		$usuario = $_POST['usuario'];
 		$senha = md5(md5($_POST['senha']));
-		$telefoneUsuario = $_POST['telefoneUsuario'];
+		$telefoneUsuarioSemTratar = $_POST['telefoneUsuario'];
+		$telefoneUsuario = preg_replace('/[^0-9]/', '', $telefoneUsuarioSemTratar);
 		$cargo = $_POST['cargo'];
 
 //Validação se não há estacionamentos cadastrados no mesmo CNPJ
