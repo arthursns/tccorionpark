@@ -20,6 +20,7 @@
         $dado = sqlsrv_fetch_array($exec1);
         $verificaConsulta = sqlsrv_has_rows($exec1);
         $erro = [];
+        $_SESSION['id_login'] = $dado['id_login'];
     
         //Verificação se o usuário digitado pelo usuário confere ao cadastrado no Banco de dados
         if ($verificaConsulta === false) {
@@ -37,6 +38,7 @@
             echo "<script>alert('Logado com sucesso'); location.href='indexGerenciador.php'</script>";
         }
         
+        //Pegando o ID do estacionamento e registrando na Session
         $selectIdCli2 = "SELECT id_cli2 FROM tb_cliente_estacionamento WHERE cnpj LIKE '$_SESSION[cnpj]'";
         $exec2 = sqlsrv_query($conn, $selectIdCli2);
         if ($exec2 === false) {
@@ -44,6 +46,15 @@
                  }
         $dadoIdCli2 = sqlsrv_fetch_array($exec2);
         $_SESSION['id_cli2'] = $dadoIdCli2['id_cli2'];
+
+        //Pegando o nome do usuário e registrando na session
+        $selectNome = "SELECT nome FROM tb_responsavel WHERE id_cli2 = '$_SESSION[id_cli2]' AND  id_login = '$_SESSION[id_login]'";
+        $exec3 = sqlsrv_query($conn, $selectNome);
+        if (exec3 === false) {
+            die(print_r(sqlsrv_errors(), true));
+        }
+        $dadoNome = sqlsrv_fetch_array($exec3);
+        $_SESSION['nome'] = $dadoNome['nome'];
 
     }
     ?>

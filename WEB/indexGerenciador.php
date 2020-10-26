@@ -79,7 +79,7 @@ include("conexaoBD.php");
 
     <div class="contentindex">
         <div class="row">
-            <h2>Bem vindo @user.</h2>
+            <h2>Bem vindo <?php echo $_SESSION['nome']?>.</h2>
         </div>
     </div>
 
