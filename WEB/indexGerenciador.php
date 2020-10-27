@@ -74,12 +74,12 @@ include("conexaoBD.php");
         <a href="viewCupons.php">Cupons</a>
         <a href="viewControle.php">Controle de Entrada e Saída</a>
         <a href="viewReserva.php">Reserva</a>
-        <a href="#">Sair</a>
+        <a href="sairModel.php">Sair</a>
     </div>
 
     <div class="contentindex">
         <div class="row">
-            <h2>Bem vindo @user.</h2>
+            <h2>Bem vindo <?php echo $_SESSION['nome']?>.</h2>
         </div>
     </div>
 

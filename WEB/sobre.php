@@ -116,7 +116,14 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
                                 <img src="./img/logo.jpg" alt="" style="border: 1px solid rgb(224, 224, 224);">
                             </div>
                             <div class="column2" id="teste">
-                                <h1>Mais de 15 estacionamentos cadastrados;</h1>
+                                <h1>Mais de <?php
+                                            echo $numEstacionamentos;
+                                            if ($numEstacionamentos = 1) {
+                                                echo " estacionamentos";
+                                            } else {
+                                                echo " estacionamentos";
+                                            }
+                                            ?> cadastrados;</h1>
                                 <h1>Mais de 35 funcionários com anos de experiência;</h1>
                                 <h1>Mais de 5.000 vagas administradas.</h1>
                             </div>

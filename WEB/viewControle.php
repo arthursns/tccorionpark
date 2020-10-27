@@ -14,40 +14,69 @@
         float: right;
         color: transparent;
     }
-    
+
     .sidebar .icone:hover {
         background-color: transparent;
         color: transparent;
     }
-    
+
+    input[type="text"] {
+        padding: 10px 20px;
+        border: none;
+    }
+
+    button[type="submit"] {
+        background-color: #F7CE3E;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+    }
+
     @media screen and (max-width: 600px) {
         .sidebar a:not(:first-child) {
             display: none;
         }
+
         .sidebar a.icon {
             float: right;
             display: block;
         }
+
         .sidebar .icone {
             position: fixed;
             float: right;
             color: rgb(11, 19, 19);
         }
+
         .sidebar .icone:hover {
             background-color: #555;
             color: white;
         }
+
+        input[type="text"] {
+            margin: 5px;
+            width: 91%;
+            margin-left: 0;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            margin: 5px;
+            margin-left: 0;
+        }
     }
-    
+
     @media screen and (max-width: 600px) {
         .sidebar.responsive {
             position: relative;
         }
+
         .sidebar.responsive .icone {
             position: fixed;
             right: 0;
             top: 0;
         }
+
         .sidebar.responsive a {
             float: none;
             display: block;
@@ -76,6 +105,31 @@
         <h2>Controle de Entrada e Saida</h2>
     </div>
     <div class="content">
+        <div class="row">
+            <h3>Cadastrar Carro</h3>
+        </div>
+        <div class="row">
+            <form action="" method="" class="cadcarro">
+                <input type="text" placeholder="Cliente">
+                <input type="text" placeholder="Plcaca">
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <div class="row" style="padding-top: 10px;">
+
+            <table id="customers">
+                <tr>
+                    <th>Nome do cliente</th>
+                    <th>Placa</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>19</td>
+                    <td><button type="submit">Remover</button></td>
+                </tr>
+            </table>
+        </div>
     </div>
     <script>
         function myFunction() {
