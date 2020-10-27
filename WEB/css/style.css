@@ -54,6 +54,11 @@
         background-image: url("../img/6e2a4440-dbda-4760-b46b-ce39db5720cf.jpg");
     }
     
+    .header img {
+        margin-top: 30px;
+        bottom: 0%;
+    }
+    
     .leftcolumn {
         margin-left: 10%;
         float: left;
