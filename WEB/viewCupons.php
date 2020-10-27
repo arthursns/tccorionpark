@@ -3,12 +3,11 @@ include("conexaoBD.php");
 
 session_start();
 
-$selectCupons = "SELECT * FROM tb_cupons WHERE id_cli2 = '$_SESSION['id_cli2']'";
+$selectCupons = "SELECT * FROM tb_cupons WHERE id_cli2 = '$_SESSION[id_cli2]'";
 $exec1 = sqlsrv_query($conn, $selectCupons);
 if ($exec1 === false) {
     die(print_r(sqlsrv_errors(), true));
 }
-$dado = sqlsrv_fetch_array($exec1);
 ?>
 <!DOCTYPE html>
 <html>
@@ -93,12 +92,22 @@ $dado = sqlsrv_fetch_array($exec1);
                 <th>Valor</th>
                 <th>Descrição</th>
             </tr>
+            <?php while ($dado = sqlsrv_fetch_array($exec1)){ ?>
             <tr>
                 <th><?php echo $dado['id_cupom']?></th>
-                <th><?php echo $dado['status_cupons']?></th>
+                <th><?php
+                if ($dado['status_cupons'] === 1) {
+                    echo "Ativo";
+                }else{
+                    echo "Inativo";
+                }
+
+                ?></th>
                 <th><?php echo $dado['valor']?></th>
                 <th><?php echo $dado['descricao']?></th>
             </tr>
+        <?php } ?>
+        <a href="cadCupons.php">Cadastrar cupom novo</a>
         </table>
     </div>
     <script>
