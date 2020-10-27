@@ -25,7 +25,7 @@
         border: none;
     }
 
-    abutton[type="submit"] {
+    button[type="submit"] {
         background-color: #F7CE3E;
         padding: 10px 20px;
         border: none;
