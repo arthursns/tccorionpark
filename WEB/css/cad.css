@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 body {
     background-color: #e6c13b;
-    overflow: hidden;
 }
 
 .orion {
@@ -20,12 +19,12 @@ body {
 }
 
 .form {
-    width: auto;
-    max-width: 80%;
+    padding: 7.5%;
+    max-width: 60%;
     position: relative;
     z-index: 1;
     background: #FFFFFF;
-    margin: 0 auto 100px;
+    margin: 0 auto 50px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }

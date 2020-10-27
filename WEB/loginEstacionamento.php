@@ -68,7 +68,7 @@
                     <input type="password" name="password" placeholder="Senha"/>
                     <input type="submit" placeholder="Entrar">
                     <p class="message">Não está registrado? <a href="cadEstacionamento.php">Criar conta.</a></p>
-                    <p class="message"><a href="index.html">Voltar ao ínicio</a></p>
+                    <p class="message"><a href="index.php">Voltar ao ínicio</a></p>
                 </form>
             </div>
         </div>
