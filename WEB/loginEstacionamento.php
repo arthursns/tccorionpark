@@ -59,6 +59,10 @@
         <title></title>
         <link rel="stylesheet" href="css/login.css?ts=<?=time()?>">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+        <script src="js/JQuery.js" type="text/javascript" ></script>
+        <script src="js/mask.js" type="text/javascript" ></script>
+        <script src="js/script.js" type="text/javascript" ></script>
+
     </head>
 
     <body>
@@ -72,7 +76,7 @@
             <div class="form">
                 <H1 class="orion">Orion Park</H1>
                 <form class="login-form" name="formlogin" method="POST">
-                    <input type="text" name="cnpj" placeholder="CNPJ do estacionamento">
+                    <input type="text" name="cnpj" placeholder="CNPJ do estacionamento" id="cnpj" class="cnpj">
                     <input value="<?php if(isset($_SESSION)) echo $_SESSION['user'] ?>" type="text" name="user" placeholder="Usuário">
                     <input type="password" name="password" placeholder="Senha"/>
                     <input type="submit" placeholder="Entrar">

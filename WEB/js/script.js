@@ -15,4 +15,5 @@ $(function() {
     $('input#telefoneEstacionamento').mask('(00) 00000-0000');
     $('input#telefoneUsuario').mask('(00) 00000-0000');
     $('input#numero').mask('0000');
+    $('input#dinheiro').mask('#.##0,00', { reverse: true });
 });

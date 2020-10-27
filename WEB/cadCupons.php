@@ -19,7 +19,9 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<script src="js/JQuery.js" type="text/javascript" ></script>
+<script src="js/mask.js" type="text/javascript" ></script>
+<script src="js/script.js" type="text/javascript" ></script>
 <body>
 
     <div class="w3-sidebar w3-collapse w3-animate-left w3-large w3-black" style="z-index:3;width:300px;transition: .3s" id="mySidebar">
@@ -54,7 +56,7 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
                     <label for="descricao">Descrição</label>
                     <input type="text" id="fname" name="descricao" placeholder="Descrição" maxlength="255">
                     <label for="valor">Valor</label>
-                    <input type="text" id="lname" name="valor" placeholder="R$ 999,99" maxlength="8">
+                    <input type="text" id="dinheiro" name="dinheiro" placeholder="R$ 999,99" class="dinheiro"  />
                     <label>Status</label>
                     <br>
                     <input type="radio" name="status" value="1"> Ativo<br>

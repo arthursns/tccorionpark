@@ -19,6 +19,9 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="js/JQuery.js" type="text/javascript" ></script>
+<script src="js/mask.js" type="text/javascript" ></script>
+<script src="js/script.js" type="text/javascript" ></script>
 
 <body>
 
@@ -56,7 +59,7 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
                     <label for="email">Email</label>
                     <input type="text" id="lname" name="email" placeholder="Email" maxlength="100">
                     <label>Telefone</label>
-                    <input type="text" id="fname" name="telefone" placeholder="DDD + Telefone Ex: (12934567890)" maxlength="11">
+                    <input type="text" id="telefoneUsuario" name="telefoneUsuario" placeholder="DDD + Telefone Ex: (1293456789)" class="telefoneUsuario">
                     <label>Cargo</label>
                     <select name="cargo" id="cargo">
                         <option value="">Selecione um cargo</option>
