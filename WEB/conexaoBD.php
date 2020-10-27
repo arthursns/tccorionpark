@@ -1,12 +1,10 @@
 <?php
 //$serverName = "DESKTOP-HIAOB1Q\\SQLEXPRESS"; //NomeDoServidor\\NomeDoBanco  Alterar isso antes de tentar rodar!!!!!!!!!!
-<<<<<<< HEAD
+
 $serverName = "DESKTOP-9LK3UQP\\SQLEXPRESS01"; //miguel
 //$serverName = "DESKTOP-12528G0\\SQLEXPRESS01";
-=======
 //$serverName = "DESKTOP-9LK3UQP\\SQLEXPRESS01";
-$serverName = "DESKTOP-12528G0\\SQLEXPRESS01";
->>>>>>> deee95fc06ddb834030f352ccef8c31be1e15c1b
+//$serverName = "DESKTOP-12528G0\\SQLEXPRESS01";
 //$serverName = "DESKTOP-RMNIEMU\\SQLEXPRESS";
 
 

@@ -20,6 +20,18 @@
         color: transparent;
     }
 
+    input[type="text"] {
+        padding: 10px 20px;
+        border: none;
+    }
+
+    abutton[type="submit"] {
+        background-color: #F7CE3E;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+    }
+
     @media screen and (max-width: 600px) {
         .sidebar a:not(:first-child) {
             display: none;
@@ -39,6 +51,18 @@
         .sidebar .icone:hover {
             background-color: #555;
             color: white;
+        }
+
+        input[type="text"] {
+            margin: 5px;
+            width: 91%;
+            margin-left: 0;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            margin: 5px;
+            margin-left: 0;
         }
     }
 
