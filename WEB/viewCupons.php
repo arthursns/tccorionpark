@@ -107,6 +107,7 @@ if ($exec1 === false) {
                 <th><?php echo $dado['descricao']?></th>
             </tr>
         <?php } ?>
+        <a href="cadCupons.php">Cadastrar cupom novo</a>
         </table>
     </div>
     <script>
