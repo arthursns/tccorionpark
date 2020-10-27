@@ -11,7 +11,27 @@ if ($exec1 === false) {
 ?>
 <!DOCTYPE html>
 <html>
+<script src="js/JQuery.js" type="text/javascript" ></script>
+<script type="text/javascript">
 
+function idCupom(){
+    var checkRadio = document.getElementsByName("radioSelecaoCupom");
+
+    for (var i = 0 in checkRadio) 
+        if (checkRadio[i].checked)
+            var idCupom = checkRadio[i].value;
+            $.ajax({
+                url: "delCuponsModel.php",
+                type: "POST",
+                data: {idCupom:idCupom},
+                cache: false,
+                success: function(dataResult){
+                    $('#table').html(dataResult); 
+                }
+            });
+}
+
+</script>
 <head>
 <title>Cupons</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,8 +105,11 @@ if ($exec1 === false) {
 
     <div class="content">
         <h2>Cupons</h2>
+        Para editar ou excluir um cupom, marque o cupom desejado primeiro.
+        <form method="POST" action="viewCupons.php">
         <table id="customers">
             <tr>
+                <th></th>
                 <th>ID</th>
                 <th>Status</th>
                 <th>Valor</th>
@@ -94,21 +117,25 @@ if ($exec1 === false) {
             </tr>
             <?php while ($dado = sqlsrv_fetch_array($exec1)){ ?>
             <tr>
-                <th><?php echo $dado['id_cupom']?></th>
-                <th><?php
+                <td><input type="radio" name="radioSelecaoCupom" value="<?php echo $dado['id_cupom'] ?>"></td>
+                <td><?php echo $dado['id_cupom']?></td>
+                <td><?php
                 if ($dado['status_cupons'] === 1) {
                     echo "Ativo";
                 }else{
                     echo "Inativo";
                 }
 
-                ?></th>
-                <th><?php echo $dado['valor']?></th>
-                <th><?php echo $dado['descricao']?></th>
+                ?></td>
+                <td>R$<?php echo number_format($dado['valor'],2,",",".")?></td>
+                <td><?php echo $dado['descricao']?></td>
             </tr>
         <?php } ?>
         <a href="cadCupons.php">Cadastrar cupom novo</a>
         </table>
+        <input type="submit" name="editar" value="Editar">
+        <input type="button" name="excluir" value="Excluir" onclick="idCupom()">
+        </form>
     </div>
     <script>
         function myFunction() {

@@ -12,7 +12,7 @@ $id_cli2 = $_SESSION['id_cli2'];
 //Pegando os outros dados pelo POST
 
 $descricao = $_POST['descricao'];
-$valor = $_POST['valor'];
+$valor = str_replace(',', '.', $_POST['valor']); 
 $status = $_POST['status'];
 //Inserção tabela cupons
 
@@ -23,7 +23,8 @@ if ($exec1 === false) {
 	die(print_r(sqlsrv_errors(), true));
 }else{
 	echo "<script>
-	alert('Cupom cadastrado com sucesso!'); 
+	alert('Cupom cadastrado com sucesso!);
+	location.href='viewCupons.php'
 	</script>";
 }
 ?>
