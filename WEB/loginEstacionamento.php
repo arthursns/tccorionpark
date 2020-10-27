@@ -12,7 +12,7 @@
         $_SESSION['cnpj'] = $_POST['cnpj'];
     
         //Selecionar usuário para verificar se há usuarios cadastrados com o mesmo inserido pelo usuário
-        $selectLogin = "SELECT senha, usuario FROM tb_login INNER JOIN tb_responsavel ON tb_responsavel.id_login = tb_login.id_login INNER JOIN tb_cliente_estacionamento ON tb_cliente_estacionamento.id_cli2 = tb_responsavel.id_cli2 WHERE usuario = '$_SESSION[user]' AND tb_cliente_estacionamento.cnpj LIKE '$_SESSION[cnpj]'";
+        $selectLogin = "SELECT * FROM tb_login INNER JOIN tb_responsavel ON tb_responsavel.id_login = tb_login.id_login INNER JOIN tb_cliente_estacionamento ON tb_cliente_estacionamento.id_cli2 = tb_responsavel.id_cli2 WHERE usuario = '$_SESSION[user]' AND tb_cliente_estacionamento.cnpj LIKE '$_SESSION[cnpj]'";
         $exec1 = sqlsrv_query($conn, $selectLogin);
         if ($exec1 === false) {
                      die(print_r(sqlsrv_errors(), true));
