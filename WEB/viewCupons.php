@@ -8,7 +8,6 @@ $exec1 = sqlsrv_query($conn, $selectCupons);
 if ($exec1 === false) {
     die(print_r(sqlsrv_errors(), true));
 }
-$dado = sqlsrv_fetch_array($exec1);
 ?>
 <!DOCTYPE html>
 <html>
@@ -93,10 +92,11 @@ $dado = sqlsrv_fetch_array($exec1);
                 <th>Valor</th>
                 <th>Descrição</th>
             </tr>
+            <?php while ($dado = sqlsrv_fetch_array($exec1)){ ?>
             <tr>
                 <th><?php echo $dado['id_cupom']?></th>
                 <th><?php
-                if ($dado['status_cupons'] = 1) {
+                if ($dado['status_cupons'] === 1) {
                     echo "Ativo";
                 }else{
                     echo "Inativo";
@@ -106,6 +106,7 @@ $dado = sqlsrv_fetch_array($exec1);
                 <th><?php echo $dado['valor']?></th>
                 <th><?php echo $dado['descricao']?></th>
             </tr>
+        <?php } ?>
         </table>
     </div>
     <script>
