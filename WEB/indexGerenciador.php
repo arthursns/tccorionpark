@@ -8,6 +8,8 @@ include("conexaoBD.php");
 <html>
 
 <head>
+    <title>Página inicial</title>
+    <link rel="icon" type="image/icon" href="img/logo.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/sistema.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
