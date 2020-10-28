@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("conexaoBD.php");
 
 $selectCargos = "SELECT * FROM tb_cargo";
@@ -13,91 +13,20 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
 
 <!DOCTYPE html>
 <html>
-    <title>Cadastro de Cupons</title>
-    <link rel="icon" type="image/icon" href="img/logo.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/viewEstacionamento.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Cadastro de Cupons</title>
+<link rel="icon" type="image/icon" href="img/logo.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/viewEstacionamento.css">
+<link rel="stylesheet" href="css/cadcupons.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="js/JQuery.js" type="text/javascript" ></script>
+<script src="js/mask.js" type="text/javascript" ></script>
+<script src="js/script.js" type="text/javascript" ></script>
 </head>
-<style>
-    .sidebar .icone {
-        position: relative;
-        float: right;
-        color: transparent;
-    }
 
-    .sidebar .icone:hover {
-        background-color: transparent;
-        color: transparent;
-    }
-
-    input[type="text"] {
-        padding: 10px 20px;
-        border: none;
-    }
-
-    button[type="submit"] {
-        background-color: #F7CE3E;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-    }
-
-    @media screen and (max-width: 600px) {
-        .sidebar a:not(:first-child) {
-            display: none;
-        }
-
-        .sidebar a.icon {
-            float: right;
-            display: block;
-        }
-
-        .sidebar .icone {
-            position: fixed;
-            float: right;
-            color: rgb(11, 19, 19);
-        }
-
-        .sidebar .icone:hover {
-            background-color: #555;
-            color: white;
-        }
-
-        input[type="text"] {
-            margin: 5px;
-            width: 91%;
-            margin-left: 0;
-        }
-
-        button[type="submit"] {
-            width: 100%;
-            margin: 5px;
-            margin-left: 0;
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        .sidebar.responsive {
-            position: relative;
-        }
-
-        .sidebar.responsive .icone {
-            position: fixed;
-            right: 0;
-            top: 0;
-        }
-
-        .sidebar.responsive a {
-            float: none;
-            display: block;
-            text-align: left;
-        }
-    }
-</style>
-
-<body><div class="sidebar" id="navzao">
+<body>
+    <div class="sidebar" id="navzao">
         <a href="javascript:void(0);" class="icone" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -114,22 +43,32 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
     <div class="content">
         <h2>Controle de Entrada e Saida</h2>
     </div>
-        <div class="content">
-            <div class="row">
-                <form action="cadCuponsModel.php" method="POST">
-                    <h1>Dados Pessoais</h1>
-                    <label for="descricao">Descrição</label>
-                    <input type="text" id="fname" name="descricao" placeholder="Descrição" maxlength="255">
-                    <label for="valor">Valor</label>
-                    <input type="text" id="dinheiro" name="dinheiro" placeholder="R$ 999,99" class="dinheiro">
-                    <label>Status</label>
-                    <br>
-                    <input type="radio" name="status" value="1"> Ativo<br>
-                    <input type="radio" name="status" value="0"> Inativo<br>
-                    <input type="submit" value="Cadastrar">
-                </form>
-            </div>
+    <div class="content">
+        <div class="row">
+            <form action="cadCuponsModel.php" method="POST">
+                <table id="customers">
+                    <tr>
+                        <td>Descrição</td>
+                        <td>Placa</td>
+                        <td>Status</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="fname" name="descricao" placeholder="Descrição" maxlength="255"></td>
+                        <td>
+                            <input type="text" id="dinheiro" name="dinheiro" placeholder="R$ 999,99" class="dinheiro"></td>
+                        <td>
+                            <input type="radio" name="status" value="1">Ativo<br>
+                            <input type="radio" name="status" value="0">Inativo</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                </table>
+                <input type="submit" value="Cadastrar">
+            </form>
+            </form>
         </div>
+    </div>
 
     </div>
 

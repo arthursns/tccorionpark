@@ -1,0 +1,81 @@
+.sidebar .icone {
+    position: relative;
+    float: right;
+    color: transparent;
+}
+
+.sidebar .icone:hover {
+    background-color: transparent;
+    color: transparent;
+}
+
+input[type="text"] {
+    padding: 10px 20px;
+    border: none;
+}
+
+button[type="submit"],
+input[type="submit"] {
+    background-color: #F7CE3E;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: .3s;
+    margin: 5px;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background-color: #000000;
+    color: blanchedalmond;
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar a:not(:first-child) {
+        display: none;
+    }
+    .sidebar a.icon {
+        float: right;
+        display: block;
+    }
+    .sidebar .icone {
+        position: fixed;
+        float: right;
+        color: rgb(11, 19, 19);
+    }
+    .sidebar .icone:hover {
+        background-color: #555;
+        color: white;
+    }
+    input[type="text"] {
+        margin: 5px;
+        width: 91%;
+        margin-left: 0;
+    }
+    button[type="submit"],
+    input[type="submit"] {
+        width: 100%;
+        margin: 5px;
+        margin-left: 0;
+    }
+    input[type="text"] {
+        padding: 10px 10px;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar.responsive {
+        position: relative;
+    }
+    .sidebar.responsive .icone {
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+    .sidebar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
