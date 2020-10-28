@@ -1,0 +1,34 @@
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.modal-content{
+    width: 500px;
+    height: 150px;
+    background-color: white;
+    opacity: 1;
+    border-radius: 4px;
+    text-align: center;
+}
+.modal-content button{
+    margin: 10px auto;
+}
+
+@media screen and (max-width: 600px) {
+
+    .modal-content{
+        height: 175px;
+    }
+    .modal-content button{
+        width: 50%;
+        margin: 10px auto;
+    }
+
+}
