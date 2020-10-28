@@ -151,7 +151,7 @@ if ($exec1 === false) {
     <div class="content">
         <h2>Cupons</h2>
         Para editar ou excluir um cupom, marque o cupom desejado primeiro.
-        <form method="POST" action="viewCupons.php">
+        <form method="POST" action="editCupons.php">
             <table id="customers">
                 <tr>
                     <th></th>
