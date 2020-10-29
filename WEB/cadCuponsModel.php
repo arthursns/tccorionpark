@@ -16,8 +16,7 @@ $valor = str_replace(',', '.', $_POST['dinheiro']);
 $status = $_POST['status'];
 //Inserção tabela cupons
 
-$insertCupons = "INSERT INTO tb_cupons (descricao, status_cupons, id_cli2, valor) 
-VALUES ('$descricao', '$status', $id_cli2, $valor)";
+$insertCupons = "INSERT INTO tb_cupons(descricao, status_cupons, id_cli2, valor) VALUES ('$descricao', '$status', $id_cli2, $valor)";
 $exec1 = sqlsrv_query($conn, $insertCupons);
 if ($exec1 === false) {
 	die(print_r(sqlsrv_errors(), true));

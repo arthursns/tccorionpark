@@ -70,7 +70,7 @@
         <a  href="viewCupons.php">Cupons</a>
         <a  href="viewControle.php">Controle de Entrada e Saída</a>
         <a href="viewReserva.php">Reserva</a>
-        <a href="#">Sair</a>
+        <a href="sairModel.php">Sair</a>
     </div>
     <div class="content">
         <h2>Lista de Funcionários</h2>
