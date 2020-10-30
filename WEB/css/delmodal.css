@@ -48,13 +48,14 @@
     position: relative;
     font-size: 25px;
 }
-
+/*  */
+/*  */
 @media screen and (max-width: 600px) {
     .modal-content {
-        height: 175px;
+        height: auto;
     }
     .modal-content button {
-        width: 50%;
-        margin: 10px auto;
+        width: 45%;
+        margin: auto auto;
     }
 }
