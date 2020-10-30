@@ -19,16 +19,25 @@ $dado = sqlsrv_fetch_array($exec1);
 </head>
 <body>
 <form action="editCuponsModel.php" method="POST">
-                    <h1>Dados Pessoais</h1>
+                    <h1>Edição Cupom</h1>
+                    <input type="hidden" name="idCupom" value="<?php echo($idCupom)?>">
                     <label for="descricao">Descrição</label>
-                    <input type="text" id="fname" name="descricao" placeholder="Descrição" maxlength="255">
+                    <input type="text" id="fname" name="descricao" placeholder="Descrição" maxlength="255" value="<?php echo($dado['descricao']) ?>">
                     <label for="valor">Valor</label>
-                    <input type="text" id="dinheiro" name="dinheiro" placeholder="R$ 999,99" class="dinheiro">
+                    <input type="text" id="dinheiro" name="dinheiro" placeholder="R$ 999,99" class="dinheiro" value="<?php echo($dado['valor']) ?>">
                     <label>Status</label>
                     <br>
-                    <input type="radio" name="status" value="1"
-                    <?php echo "checked"?>> Ativo<br>
-                    <input type="radio" name="status" value="0"> Inativo<br>
+                    <?php
+                    if ($dado['status_cupons'] === 1) {
+                        echo'<input type="radio" name="status" value="1" checked> Ativo<br>
+                        <input type="radio" name="status" value="0"> Inativo<br>';
+                    }else{
+                        echo'<input type="radio" name="status" value="1"> Ativo<br>
+                        <input type="radio" name="status" value="0" checked> Inativo<br>';
+                    }
+
+                    ?>
+                    
                     <input type="submit" value="Cadastrar">
                 </form>
 </body>

@@ -3,10 +3,6 @@ include ("conexaoBD.php");
 include("protect.php");
 protect();
 
-//Iniciando a session
-
-session_start();
-
 //Pegando o ID do estacionamento logado na session
 
 $id_cli2 = $_SESSION['id_cli2'];

@@ -1,7 +1,6 @@
 <?php
 include("conexaoBD.php");
 include("protect.php");
-session_start();
 protect();
 
 

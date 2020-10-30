@@ -31,21 +31,19 @@ include ("conexaoBD.php");
 //Validação se não há estacionamentos cadastrados no mesmo CNPJ
 
 //Preciso corrigir isso!!!
-/*
 	$consultaValidaEstacionamento = "SELECT (cnpj) FROM tb_cliente_estacionamento";
 	$exec = sqlsrv_query($conn, $consultaValidaEstacionamento);
 	if($exec === false) {
 	     die(print_r(sqlsrv_errors(), true));
 	 }else{
 	 	$validaEstacionamento = sqlsrv_fetch_array($exec);
-	 	if ($validaEstacionamento['cnpj'] == $cnpj) {
+	 	if ($validaEstacionamento['cnpj'] === $cnpj) {
 	 		echo "<script>
 	 		alert('Já possui um estacionamento cadastrado nesse CNPJ!');
-	 		windows.history.back();
+	 		window.history.back();
 	 		</script>";
 	 	}
-	 }
-	 */
+	 	else {
 
 
 // Função para consultar o último Id inserido
@@ -132,5 +130,7 @@ if ($exec7 === false) {
 	echo "<script>
 	alert('Estacionamento cadastrado com sucesso!'); window.location='loginEstacionamento.php';
 	</script>";
+}
+}
 }
 ?>
