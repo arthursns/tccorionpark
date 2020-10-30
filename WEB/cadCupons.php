@@ -41,7 +41,7 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
     </div>
 
     <div class="content">
-        <h2>Controle de Entrada e Saida</h2>
+        <h2>Cadastrar Cupom</h2>
     </div>
     <div class="content">
         <div class="row">
@@ -49,7 +49,7 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
                 <table id="customers">
                     <tr>
                         <td>Descrição</td>
-                        <td>Placa</td>
+                        <td>Valor</td>
                         <td>Status</td>
                     </tr>
                     <tr>

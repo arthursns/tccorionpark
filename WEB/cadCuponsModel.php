@@ -22,8 +22,8 @@ if ($exec1 === false) {
 	die(print_r(sqlsrv_errors(), true));
 }else{
 	echo "<script>
-	alert('Cupom cadastrado com sucesso!);
-	location.href='viewCupons.php'
+	alert('Cupom cadastrado com sucesso!');
+	window.location='viewCupons.php';
 	</script>";
 }
 ?>

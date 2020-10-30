@@ -232,8 +232,9 @@ if ($exec1 === false) {
                         idCupom: idCupom
                     },
                     cache: false,
-                    success: function(dataResult) {
-                        $('#table').html(dataResult);
+                    success: function(sucesso) {
+                    alert('Excluido com sucesso');
+                    location.reload();
                     }
                 });
             }

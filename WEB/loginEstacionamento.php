@@ -9,7 +9,7 @@
     
         $_SESSION['user'] = $_POST['user'];
         $_SESSION['password'] = md5(md5($_POST['password']));
-        $_SESSION['cnpj'] = $_POST['cnpj'];
+        $_SESSION['cnpj'] = preg_replace('/[^0-9]/', '', $_POST['cnpj']);
     
         //Selecionar usuário para verificar se há usuarios cadastrados com o mesmo inserido pelo usuário
         $selectLogin = "SELECT * FROM tb_login INNER JOIN tb_responsavel ON tb_responsavel.id_login = tb_login.id_login INNER JOIN tb_cliente_estacionamento ON tb_cliente_estacionamento.id_cli2 = tb_responsavel.id_cli2 WHERE usuario = '$_SESSION[user]' AND tb_cliente_estacionamento.cnpj LIKE '$_SESSION[cnpj]'";
