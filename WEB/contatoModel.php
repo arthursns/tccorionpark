@@ -1,5 +1,7 @@
 <?php
 include("conexaoBD.php");
+include("protect.php");
+protect();
 
 $msg_contato = $_POST['msg_contato'];
 $email_contato = $_POST['email_contato'];

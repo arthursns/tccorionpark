@@ -1,5 +1,7 @@
 <?php
 include("conexaoBD.php");
+include("protect.php");
+protect();
 
 $selectCargos = "SELECT * FROM tb_cargo";
 $exec1 = sqlsrv_query($conn, $selectCargos);

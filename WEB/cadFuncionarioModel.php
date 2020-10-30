@@ -1,5 +1,7 @@
 <?php
 include('conexaoBD.php');
+include("protect.php");
+protect();
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];

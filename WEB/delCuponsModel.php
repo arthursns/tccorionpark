@@ -1,5 +1,7 @@
 <?php
 include("conexaoBD.php");
+include("protect.php");
+protect();
 
 $idCupom = $_POST['idCupom'];
 

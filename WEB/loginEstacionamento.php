@@ -2,6 +2,7 @@
 
     include("conexaoBD.php");
     
+    
     //Verificação se usuário já acessou
     if(isset($_POST['user']) && strlen($_POST['user']) > 0){
         if(!isset($_SESSION))

@@ -1,7 +1,9 @@
 <?php
 include("conexaoBD.php");
-        
-        session_start();
+include("protect.php");
+session_start();
+protect();
+
 
 ?>
 <!DOCTYPE html>
