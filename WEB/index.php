@@ -37,7 +37,7 @@
                 <div class="card">
                     <h2>Nosso sistema está no ar!</h2>
                     <h5>Barueri, 31/10/2020.</h5>
-                    <p>Graças ao esforço e competência da nossa equipe de desenvolvimento, o sistema foi ao ar neste sábado de Halloween. O sistema está 100% funcional. Você, dono de estacionamento, faça já o seu <a href="app.html" style="text-decoration: none; color: springgreen;">Cadastro</a>.
+                    <p>Graças ao esforço e competência da nossa equipe de desenvolvimento, o sistema foi ao ar neste sábado de Halloween. O sistema está 100% funcional. Você, dono de estacionamento, faça já o seu <a href="cadEstacionamento.php" style="text-decoration: none; color: springgreen;">Cadastro</a>.
                         <a href="cadEstacionamento.php"></a>
                     </p>
                     <div class="footer1">

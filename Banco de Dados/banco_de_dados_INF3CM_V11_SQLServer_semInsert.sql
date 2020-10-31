@@ -59,6 +59,7 @@ id_login  int identity primary key not null,
 senha varchar(32) not null,
 usuario varchar(255) not null,
 id_nivel_acesso int not null,
+status bit,
 constraint fk_login_nivel_acesso foreign key(id_nivel_acesso)
 references tb_nivel_acesso (id_nivel_acesso)
 ); 

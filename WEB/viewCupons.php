@@ -179,8 +179,7 @@ if ($exec1 === false) {
                 </table>
                 <table>
                     <tr>
-                        <td>
-                            <a href="cadCupons.php">Cadastrar cupom novo</a></td>
+                        <td><a href="cadCupons.php">Cadastrar cupom novo</a></td>
                         <td><input type="submit" name="editar" value="Editar"></td>
                         <td><button type="button" name="excluir" id="button">Excluir</button></td>
                     </tr>

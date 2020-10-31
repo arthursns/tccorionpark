@@ -21,11 +21,10 @@
         $dado = sqlsrv_fetch_array($exec1);
         $verificaConsulta = sqlsrv_has_rows($exec1);
         $erro = [];
-        $_SESSION['id_login'] = $dado['id_login'];
     
         //Verificação se o usuário digitado pelo usuário confere ao cadastrado no Banco de dados
         if ($verificaConsulta === false) {
-            $erro[] = "<script>alert('Este usuário não existe.')</script>";
+            $erro[] = "<script>alert('CNPJ ou usuário incorreto.')</script>";
         }else{
     
             //Verificação se a senha digitada pelo usuário confere com a cadastrada no Banco de dados
@@ -36,10 +35,9 @@
     }
         // Não constando nenhum erro, logado com sucesso
         if (count($erro) == 0 || !isset($erro)) {
+            $_SESSION['id_login'] = $dado['id_login'];
             echo "<script>alert('Logado com sucesso'); location.href='indexGerenciador.php'</script>";
-        }
-        
-        //Pegando o ID do estacionamento e registrando na Session
+            //Pegando o ID do estacionamento e registrando na Session
         $selectIdCli2 = "SELECT id_cli2 FROM tb_cliente_estacionamento WHERE cnpj LIKE '$_SESSION[cnpj]'";
         $exec2 = sqlsrv_query($conn, $selectIdCli2);
         if ($exec2 === false) {
@@ -56,6 +54,9 @@
         }
         $dadoNome = sqlsrv_fetch_array($exec3);
         $_SESSION['nome'] = $dadoNome['nome'];
+        }
+        
+        
 
     }
     ?>

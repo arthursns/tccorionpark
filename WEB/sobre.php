@@ -9,7 +9,6 @@ $exec1 = sqlsrv_query($conn, $selectEstacionamentos, $params, $options);
 if ($exec1 === false) {
     die(print_r(sqlsrv_errors(), true));
 }
-$dado = sqlsrv_fetch_array($exec1);
 $numEstacionamentos = sqlsrv_num_rows($exec1);
 ?>
 
@@ -116,14 +115,14 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
                                 <img src="./img/logo.jpg" alt="" style="border: 1px solid rgb(224, 224, 224);">
                             </div>
                             <div class="column2" id="teste">
-                                <h1>Mais de <?php
+                                <h1>Contando com <?php
                                             echo $numEstacionamentos;
                                             if ($numEstacionamentos = 1) {
-                                                echo " estacionamentos";
-                                            } else {
-                                                echo " estacionamentos";
+                                                echo " estacionamento cadastrado;";
+                                            } else if ($numEstacionamentos > 1) {
+                                                echo " estacionamentos cadastrados;";
                                             }
-                                            ?> cadastrados;</h1>
+                                            ?></h1>
                                 <h1>Mais de 35 funcionários com anos de experiência;</h1>
                                 <h1>Mais de 5.000 vagas administradas.</h1>
                             </div>
@@ -150,6 +149,10 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
                                 <th>Número de vagas</th>
                                 <th>Cidade</th>
                             </tr>
+                            <?php 
+                            if ($numEstacionamentos >= 1){
+                                while ($dado = sqlsrv_fetch_array($exec1)) { ?>
+                            
                             <tr>
                                 <th>
                                     <?php echo $dado['razao_social']; ?>
@@ -161,6 +164,10 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
                                     <?php echo $dado['cidade']; ?>
                                 </th>
                             </tr>
+                        <?php 
+                            }
+                        }  
+                         ?>
                         </table>
                     </div>
                 </div>

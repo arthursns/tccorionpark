@@ -57,11 +57,12 @@ $dado = sqlsrv_fetch_array($exec1);
                     </tr>
                     <tr>
                         <td>
+                            <?php echo($idCupom)?>
                             <input type="hidden" name="idCupom" value="<?php echo($idCupom)?>"></td>
                         <td>
                             <input type="text" id="fname" name="descricao" placeholder="Descrição" maxlength="255" value="<?php echo($dado['descricao']) ?>"></td></td>
                         <td>
-                            <input type="text" id="dinheiro" name="dinheiro" placeholder="R$ 999,99" class="dinheiro" value="<?php echo($dado['valor']) ?>"></td>
+                            <input type="text" id="dinheiro" name="dinheiro" placeholder="R$ 999,99" class="dinheiro" value="<?php echo number_format($dado['valor'], 2, ",", ".") ?>"></td>
                         <td>
                             <?php
                             if ($dado['status_cupons'] === 1) {
