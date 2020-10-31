@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <!-- Border Color -->
+    <stroke android:width="8dp" android:color="#F7CE3E" />
+
+</shape>
+
+
+shape 2
