@@ -5,11 +5,9 @@ protect();
 
 $selectCargos = "SELECT * FROM tb_cargo";
 $exec1 = sqlsrv_query($conn, $selectCargos);
-$cargos = sqlsrv_fetch_array($exec1);
 
 $selectNivelAcesso = "SELECT * FROM tb_nivel_acesso";
 $exec2 = sqlsrv_query($conn, $selectNivelAcesso);
-$nivelAcesso = sqlsrv_fetch_array($exec2);
 
 ?>
 
@@ -65,9 +63,11 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
                     <label>Cargo</label>
                     <select name="cargo" id="cargo">
                         <option value="">Selecione um cargo</option>
+                        <?php while($cargos = sqlsrv_fetch_array($exec1)){?>
                         <option value="<?php echo $cargos['id_cargo']; ?>">
                             <?php echo $cargos['descricao']; ?>
                         </option>
+                    <?php }?>
                     </select>
                     <a href="cadCargo.php">Não encontrou o cargo? Clique aqui para cadastra-lo</a>
                     <h1>Conta para acesso ao Gerenciador</h1>
@@ -81,9 +81,11 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
                     <label>Nível de Acesso</label>
                     <select name="nivelAcesso" id="nivelAcesso">
                         <option value="">Selecione um Nível de Acesso</option>
+                        <?php while($nivelAcesso = sqlsrv_fetch_array($exec2)) {?>
                         <option value="<?php echo $nivelAcesso['id_nivel_acesso']; ?>">
                             <?php echo $nivelAcesso['descricao']; ?>
                         </option>
+                    <?php }?>
                     </select>
                     <input type="submit" value="Cadastrar">
                 </form>

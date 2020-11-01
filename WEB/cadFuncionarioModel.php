@@ -5,7 +5,8 @@ protect();
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-$telefone = $_POST['telefone'];
+$telefoneSemTratar = $_POST['telefone'];
+$telefone = preg_replace('/[^0-9]/', '', $telefoneSemTratar);x
 $cargo = $_POST['cargo'];
 $usuario = $_POST['usuario'];
 $senha = md5(md5($_POST['senha']));

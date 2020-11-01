@@ -3,8 +3,8 @@ include("conexaoBD.php");
 include("protect.php");
 protect();
 
-$selectCupons = "SELECT * FROM tb_responsavel WHERE id_cli2 = '$_SESSION[id_cli2]'";
-$exec1 = sqlsrv_query($conn, $selectCupons);
+$selectFuncionario = "SELECT * FROM tb_responsavel INNER JOIN tb_login ON tb_responsavel.id_login = tb_login.id_login WHERE id_cli2 = '$_SESSION[id_cli2]'";
+$exec1 = sqlsrv_query($conn, $selectFuncionario);
 if ($exec1 === false) {
     die(print_r(sqlsrv_errors(), true));
 }
@@ -132,35 +132,35 @@ if ($exec1 === false) {
             </a>
             <a href="indexGerenciador.php">Início</a>
             <a href="viewEstacionamento.php">Estacionamento</a>
-            <a class="active" href="viewFuncionario.php">Funcionário</a>
+            <a href="viewFuncionario.php">Funcionário</a>
             <a href="viewVagas.php">Vagas</a>
-            <a href="viewCupons.php">Cupons</a>
+            <a class="active" href="viewCupons.php">Cupons</a>
             <a href="viewControle.php">Controle de Entrada e Saída</a>
             <a href="viewReserva.php">Reserva</a>
             <a href="#">Sair</a>
         </div>
 
         <div class="content">
-            <h2>Cupons</h2>
-            Para editar ou excluir um cupom, marque o cupom desejado primeiro.
-            <form method="POST" action="editCupons.php">
+            <h2>Funcionários</h2>
+            <form method="POST" action="editFuncionario.php">
                 <table id="customers">
                     <tr>
                         <th></th>
                         <th>ID</th>
                         <th>Status</th>
                         <th>Nome</th>
-                        <th>Telefone</th>
+                        <th>Email</th>
+                        <th>Usuário</th>
                     </tr>
                     <?php while ($dado = sqlsrv_fetch_array($exec1)) { ?>
                     <tr>
-                        <td><input type="radio" name="radioSelecaoCupom" value="<?php echo $dado['id_cupom'] ?>"></td>
+                        <td><input type="radio" name="radioSelecaoFuncionario" value="<?php echo $dado['id_responsavel'] ?>"></td>
                         <td>
-                            <?php echo $dado['id_cupom'] ?>
+                            <?php echo $dado['id_responsavel'] ?>
                         </td>
                         <td>
                             <?php
-                            if ($dado['status_cupons'] === 1) {
+                            if ($dado['status'] === 1) {
                                 echo "Ativo";
                             } else {
                                 echo "Inativo";
@@ -168,11 +168,14 @@ if ($exec1 === false) {
 
                             ?>
                         </td>
-                        <td>R$
-                            <?php echo number_format($dado['valor'], 2, ",", ".") ?>
+                        <td>
+                            <?php echo $dado['nome']?>
                         </td>
                         <td>
-                            <?php echo $dado['descricao'] ?>
+                            <?php echo $dado['email'] ?>
+                        </td>
+                        <td>
+                            <?php echo $dado['usuario'] ?>
                         </td>
                     </tr>
                     <?php } ?>

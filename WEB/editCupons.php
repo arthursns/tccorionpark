@@ -47,7 +47,7 @@ $dado = sqlsrv_fetch_array($exec1);
     </div>
     <div class="content">
         <div class="row">
-            <form action="cadCuponsModel.php" method="POST">
+            <form action="editCuponsModel.php" method="POST">
                 <table id="customers">
                     <tr>
                         <td>ID</td>
@@ -79,8 +79,7 @@ $dado = sqlsrv_fetch_array($exec1);
                     <tr>
                     </tr>
                 </table>
-                <input type="submit" value="Cadastrar">
-            </form>
+                <input type="submit" value="Editar">
             </form>
         </div>
     </div>
