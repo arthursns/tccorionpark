@@ -132,9 +132,9 @@ if ($exec1 === false) {
             </a>
             <a href="indexGerenciador.php">Início</a>
             <a href="viewEstacionamento.php">Estacionamento</a>
-            <a href="viewFuncionario.php">Funcionário</a>
+            <a class="active" href="viewFuncionario.php">Funcionário</a>
             <a href="viewVagas.php">Vagas</a>
-            <a class="active" href="viewCupons.php">Cupons</a>
+            <a href="viewCupons.php">Cupons</a>
             <a href="viewControle.php">Controle de Entrada e Saída</a>
             <a href="viewReserva.php">Reserva</a>
             <a href="#">Sair</a>

@@ -80,6 +80,29 @@ protect();
 
     <div class="content">
         <h2>Reserva</h2>
+        <table id="customers">
+                    <tr>
+                        <th>ID</th>
+                        <th>CPF do Cliente</th>
+                        <th>Vaga</th>
+                        <th>Valor da Vaga p/Hora</th>
+                        <th>Carro</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>134.211.330-69</td>
+                        <td>14</td>
+                        <td>R$ 14,99</td>
+                        <td>Volkswagen Gol</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>100.769.720-20</td>
+                        <td>19</td>
+                        <td>R$ 5,99</td>
+                        <td>Fiat Palio</td>
+                    </tr>
+        </table>
     </div>
     <div class="content">
     </div>

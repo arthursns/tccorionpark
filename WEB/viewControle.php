@@ -112,12 +112,14 @@ protect();
     </div>
     <div class="content">
         <div class="row">
-            <h3>Cadastrar Carro</h3>
+            <h3>Cadastrar Entrada/Saída</h3>
         </div>
         <div class="row">
             <form action="" method="" class="cadcarro">
-                <input type="text" placeholder="Cliente">
-                <input type="text" placeholder="Plcaca">
+                <input type="text" placeholder="CPF do Cliente">
+                <input type="text" placeholder="Placa">
+                <input type="radio" name="tipoControle">Entrada
+                <input type="radio" name="tipoControle">Saída
                 <button type="submit">Cadastrar</button>
             </form>
         </div>
@@ -125,16 +127,44 @@ protect();
 
             <table id="customers">
                 <tr>
+                    <th></th>
+                    <th>ID</th>
                     <th>Nome do cliente</th>
                     <th>Placa</th>
-                    <th></th>
+                    <th>Tipo</th>
+                    <th>Data</th>
+                    <th>Hora</th>
                 </tr>
                 <tr>
+                    <td><input type="radio" name="viewControle"></td>
+                    <td>1</td>
                     <td>Alfreds Futterkiste</td>
-                    <td>19</td>
-                    <td><button type="submit">Remover</button></td>
+                    <td>XYR-3213</td>
+                    <td>Entrada</td>
+                    <td>20/10/2020</td>
+                    <td>12:05</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="viewControle"></td>
+                    <td>2</td>
+                    <td>Henrique Lucas</td>
+                    <td>CGF-6721</td>
+                    <td>Entrada</td>
+                    <td>20/10/2020</td>
+                    <td>14:55</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="viewControle"></td>
+                    <td>3</td>
+                    <td>Alfreds Futterkiste</td>
+                    <td>XYR-3213</td>
+                    <td>Saída</td>
+                    <td>20/10/2020</td>
+                    <td>18:02</td>
                 </tr>
             </table>
+            <br>
+            <button type="submit">Remover</button>
         </div>
     </div>
     <script>
