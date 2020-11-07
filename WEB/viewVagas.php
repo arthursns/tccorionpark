@@ -93,7 +93,7 @@ protect();
                     <option value="Ocupada">Ocupada</option>
                     <option value="Livre">Livre</option>
                 </select></td>
-                <td>Fox - GTX-3080</td>
+                <td>Fox - 6900>3090</td>
                 <td>Normal</td>
             </tr>
             <tr>
@@ -102,7 +102,7 @@ protect();
                     <option value="Ocupada">Ocupada</option>
                     <option value="Livre">Livre</option>
                 </select></td>
-                <td>(se tiver ocupado, o carro aparece aqui, se n fica branco)</td>
+                <td>Fiat Argo 94A-G19S</td>
                 <td>Deficiente</td>
             </tr>
             <tr>
@@ -117,8 +117,8 @@ protect();
             <tr>
                 <td>02-A</td>
                 <td><select name="Status" id="">
-                    <option value="Ocupada">Ocupada</option>
                     <option value="Livre">Livre</option>
+                    <option value="Ocupada">Ocupada</option>
                 </select></td>
                 <td></td>
                 <td>Normal</td>
