@@ -115,12 +115,11 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
                                 <img src="./img/logo.jpg" alt="" style="border: 1px solid rgb(224, 224, 224);">
                             </div>
                             <div class="column2" id="teste">
-                                <h1>Contando com <?php
-                                            echo $numEstacionamentos;
+                                <h1> <?php
                                             if ($numEstacionamentos === 1) {
-                                                echo " estacionamento cadastrado;";
+                                                echo "Contando com $numEstacionamentos estacionamento cadastrado;";
                                             } else if ($numEstacionamentos > 1) {
-                                                echo " estacionamentos cadastrados;";
+                                                echo "Contando com $numEstacionamentos estacionamentos cadastrados;";
                                             }
                                             ?></h1>
                                 <h1>Mais de 35 funcionários com anos de experiência;</h1>
@@ -132,15 +131,15 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
             </div>
             <div class="rightcolumn">
                 <div class="card">
-                    <h2>Atualmente, temos <?php
-                                            echo $numEstacionamentos;
+                    <h2> <?php
                                             if ($numEstacionamentos === 1) {
-                                                echo " estacionamento";
-                                            } else {
-                                                echo " estacionamentos";
+                                                echo "Atualmente, temos $numEstacionamentos estacionamento cadastrado conosco, segue a lista dele:";
+                                            }else if ($numEstacionamentos > 1) {
+                                                echo "Atualmente, temos $numEstacionamentos estacionamentos cadastrados conosco, segue a lista deles:";;
+                                            }else{
+                                                echo "Atualmente, não temos nenhum estacionamento cadastrado conosco.";
                                             }
                                             ?>
-                    cadastrados conosco, segue a lista deles:
                 </h2>
                     <div>
                         <table>

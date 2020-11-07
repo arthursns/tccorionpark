@@ -13,6 +13,7 @@ protect();
     <link rel="icon" type="image/icon" href="img/logo.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/sistema.css">
+    <link rel="stylesheet" href="css/viewEstacionamento.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -87,17 +88,50 @@ protect();
     </div>
 
     <div class="content">
-        <div class="rowconteudo" style="
-        border: 1px solid rgba(128, 128, 128, 0.158);">
-            <h2>Titulo de alguma coisa</h2>
+        <div class="rowconteudo" >
+            <h2><?php echo $_SESSION['razao_social']?></h2>
             <div class="rowconteudo">
-                <p>Aqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia ainda</p>
+                <p>Seu estacionamento tem atualmente (vagas) disponíveis, sendo (vagas) ocupadas.</p>
             </div>
             <div class="rowconteudo">
-                <p>Aqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia ainda</p>
-            </div>
-            <div class="rowconteudo">
-                <p>Aqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia aindaAqui vemalgum texto para conteudo, to sem ideia ainda</p>
+                <p>Horário de funcionamento</p>
+                <table id="customers">
+                    <tr>
+                        <th>Semana</th>
+                        <th>Abre</th>
+                        <th>Fecha</th>
+                    </tr>
+                    <tr>
+                        <td>Segunda</td>
+                        <td>08:00</td>
+                        <td>18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Terça</td>
+                        <td>10:00</td>
+                        <td>16:00</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta</td>
+                        <td>10:00</td>
+                        <td>16:00</td>
+                    </tr>
+                    <tr>
+                        <td>Quinta</td>
+                        <td>08:00</td>
+                        <td>18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta</td>
+                        <td>08:00</td>
+                        <td>18:00</td>
+                    </tr>
+                    <tr>
+                        <th>Fechado aos Sábados e Domingos</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

@@ -38,13 +38,14 @@
             $_SESSION['id_login'] = $dado['id_login'];
             echo "<script>alert('Logado com sucesso'); location.href='indexGerenciador.php'</script>";
             //Pegando o ID do estacionamento e registrando na Session
-        $selectIdCli2 = "SELECT id_cli2 FROM tb_cliente_estacionamento WHERE cnpj LIKE '$_SESSION[cnpj]'";
+        $selectIdCli2 = "SELECT id_cli2, razao_social FROM tb_cliente_estacionamento WHERE cnpj LIKE '$_SESSION[cnpj]'";
         $exec2 = sqlsrv_query($conn, $selectIdCli2);
         if ($exec2 === false) {
                      die(print_r(sqlsrv_errors(), true));
                  }
         $dadoIdCli2 = sqlsrv_fetch_array($exec2);
         $_SESSION['id_cli2'] = $dadoIdCli2['id_cli2'];
+        $_SESSION['razao_social'] = $dadoIdCli2['razao_social'];
 
         //Pegando o nome do usuário e registrando na session
         $selectNome = "SELECT nome FROM tb_responsavel WHERE id_cli2 = '$_SESSION[id_cli2]' AND  id_login = '$_SESSION[id_login]'";
@@ -92,7 +93,7 @@
                     <input type="text" name="cnpj" placeholder="CNPJ do estacionamento" id="cnpj" class="cnpj">
                     <input value="<?php if(isset($_SESSION)) echo $_SESSION['user'] ?>" type="text" name="user" placeholder="Usuário">
                     <input type="password" name="password" placeholder="Senha"/>
-                    <input type="submit" placeholder="Entrar">
+                    <input type="submit" placeholder="Entrar" value="Entrar">
                     <p class="message">Não está registrado? <a href="cadEstacionamento.php">Criar conta.</a></p>
                     <p class="message"><a href="index.php">Voltar ao ínicio</a></p>
                 </form>
