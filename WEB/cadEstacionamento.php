@@ -117,7 +117,7 @@ return false;
                     <label class="orion" for="" style="color: black;">Dados do Estacionamento:</label>
                     <input type="text" name="nome_fantasia" placeholder="Nome Fantasia">
                     <input type="text" name="razao_social" placeholder="Razão Social">
-                    <input type="text" name="" placeholder="CNPJ" id="cnpj" class="cnpj">
+                    <input type="text" name="cnpj" placeholder="CNPJ" id="cnpj" class="cnpj">
                     <input type="text" name="telefoneEstacionamento" placeholder="Telefone" id="telefoneEstacionamento">
 
                     <label class="orion" for="" style="color: black;">Endereço:</label>

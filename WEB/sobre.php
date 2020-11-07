@@ -117,7 +117,7 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
                             <div class="column2" id="teste">
                                 <h1>Contando com <?php
                                             echo $numEstacionamentos;
-                                            if ($numEstacionamentos = 1) {
+                                            if ($numEstacionamentos === 1) {
                                                 echo " estacionamento cadastrado;";
                                             } else if ($numEstacionamentos > 1) {
                                                 echo " estacionamentos cadastrados;";
@@ -134,7 +134,7 @@ $numEstacionamentos = sqlsrv_num_rows($exec1);
                 <div class="card">
                     <h2>Atualmente, temos <?php
                                             echo $numEstacionamentos;
-                                            if ($numEstacionamentos = 1) {
+                                            if ($numEstacionamentos === 1) {
                                                 echo " estacionamento";
                                             } else {
                                                 echo " estacionamentos";
