@@ -16,7 +16,7 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
 
 <!DOCTYPE html>
 <html>
-<title>Cadastro de Cupons</title>
+<title>Cadastro de Cargo</title>
 <link rel="icon" type="image/icon" href="img/logo.ico" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/viewEstacionamento.css">

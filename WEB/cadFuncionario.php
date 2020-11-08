@@ -60,7 +60,7 @@ $exec2 = sqlsrv_query($conn, $selectNivelAcesso);
                         <td>
                             <input type="text" id="telefoneUsuario" name="telefoneUsuario" placeholder="DDD + Telefone Ex: (1293456789)" class="telefoneUsuario"></td>
                         <td>
-                             <select name="cargoId" id="cargo">
+                             <select name="cargoId" id="cargoId">
                         <option value="">Selecione um cargo</option>
                         <?php while($cargos = sqlsrv_fetch_array($exec1)){?>
                         <option value="<?php echo $cargos['id_cargo']; ?>">

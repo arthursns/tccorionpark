@@ -195,7 +195,7 @@ if ($exec1 === false) {
                     <div class="close">+</div>
                     <h2>Deseja excluir o(s) item(s) selecionado(s)?</h2>
                     <button class="close" type="button">Cancelar</button>
-                    <button type="button" onclick="idCupom()">Confirmar</button>
+                    <button type="button" onclick="delFuncionario()">Confirmar</button>
                 </form>
             </div>
         </div>
@@ -220,17 +220,17 @@ if ($exec1 === false) {
                 document.querySelector('.bg-modal').style.display = 'none';
             });
 
-            function idCupom() {
-                var checkRadio = document.getElementsByName("radioSelecaoCupom");
+            function delFuncionario() {
+                var checkRadio = document.getElementsByName("radioSelecaoFuncionario");
 
                 for (var i = 0 in checkRadio)
                     if (checkRadio[i].checked)
-                        var idCupom = checkRadio[i].value;
+                        var idFuncionario = checkRadio[i].value;
                 $.ajax({
-                    url: "delCuponsModel.php",
+                    url: "delFuncionarioModel.php",
                     type: "POST",
                     data: {
-                        idCupom: idCupom
+                        idFuncionario: idFuncionario
                     },
                     cache: false,
                     success: function(sucesso) {

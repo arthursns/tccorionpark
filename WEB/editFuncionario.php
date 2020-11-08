@@ -55,9 +55,9 @@ $exec5 = sqlsrv_query($conn, $selectNivelAcesso);
         </a>
         <a href="indexGerenciador.php">Início</a>
         <a href="viewEstacionamento.php">Estacionamento</a>
-        <a href="viewFuncionario.php">Funcionário</a>
+        <a href="viewFuncionario.php" class="active">Funcionário > Editar Funcionário</a>
         <a href="viewVagas.php">Vagas</a>
-        <a class="active" href="viewCupons.php">Cupons > Editar Cupom</a>
+        <a href="viewCupons.php">Cupons</a>
         <a href="viewControle.php">Controle de Entrada e Saída</a>
         <a href="viewReserva.php">Reserva</a>
         <a href="sairModel.php">Sair</a>

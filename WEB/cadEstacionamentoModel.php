@@ -56,8 +56,8 @@ function idTemp($queryID) {
 //Inserções
 
 		 //Inserção tabela Login e coleta do ID inserido para inserção em tabelas dependentes
-		 $insertLogin = "INSERT INTO tb_login (senha, usuario, id_nivel_acesso)
-		 VALUES ('$senha', '$usuario', 1); SELECT SCOPE_IDENTITY()";
+		 $insertLogin = "INSERT INTO tb_login (senha, usuario, id_nivel_acesso, status)
+		 VALUES ('$senha', '$usuario', 1, 1); SELECT SCOPE_IDENTITY()";
 		 $exec1 = sqlsrv_query($conn, $insertLogin);
 		 if ($exec1 === false) {
 		 	die(print_r(sqlsrv_errors(), true));
