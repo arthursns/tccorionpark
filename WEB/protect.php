@@ -9,7 +9,6 @@
    }
 
    if(!isset($_SESSION['user']) || !is_numeric($_SESSION['user'])){
-    header('Location: loginEstacionamento.php');
    }
 
   } 

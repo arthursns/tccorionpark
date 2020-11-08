@@ -29,6 +29,7 @@ include ("conexaoBD.php");
 		$cargo = $_POST['cargo'];
 
 //Validação se não há estacionamentos cadastrados no mesmo CNPJ
+<<<<<<< HEAD
 	$consultaValidaEstacionamento = "SELECT (cnpj) FROM tb_cliente_estacionamento";
 	$exec = sqlsrv_query($conn, $consultaValidaEstacionamento);
 	if($exec === false) {
@@ -46,6 +47,11 @@ include ("conexaoBD.php");
 	 		exit();
 			}
 	 	}
+=======
+
+
+
+>>>>>>> e8f6f470bb2d9ae63e78c365e8a3611dc59464fa
 // Função para consultar o último Id inserido
 function idTemp($queryID) {
      		sqlsrv_next_result($queryID);
@@ -131,5 +137,8 @@ if ($exec7 === false) {
 	alert('Estacionamento cadastrado com sucesso!'); window.location='loginEstacionamento.php';
 	</script>";
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e8f6f470bb2d9ae63e78c365e8a3611dc59464fa
 ?>
