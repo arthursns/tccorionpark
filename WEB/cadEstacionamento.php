@@ -105,7 +105,6 @@ return false;
 
 <!-- 
 	Acho legal você dividir o cadastro em 2 partes, aí você faz da forma que achar que fica mais legal no design.
-
 	Fica legal tentar fazer algo que tipo, você ter um lugar pra selecionar o seu endereço no maps, não sei como fazer mas depois dou uma pesquisada. Se não der pra fazer isso, daria pra colocar só o CEP e ele preencher o resto.
 -->
 

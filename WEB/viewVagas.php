@@ -69,7 +69,6 @@ protect();
             <i class="fa fa-bars"></i>
         </a>
         <a href="indexGerenciador.php">Início</a>
-        <a href="viewEstacionamento.php">Estacionamento</a>
         <a href="viewFuncionario.php">Funcionário</a>
         <a class="active"href="viewVagas.php">Vagas</a>
         <a  href="viewCupons.php">Cupons</a>

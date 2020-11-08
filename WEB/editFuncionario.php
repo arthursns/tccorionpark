@@ -59,7 +59,7 @@ $exec5 = sqlsrv_query($conn, $selectNivelAcesso);
         <a class="active" href="viewCupons.php">Cupons > Editar Cupom</a>
         <a href="viewControle.php">Controle de Entrada e Saída</a>
         <a href="viewReserva.php">Reserva</a>
-        <a href="#">Sair</a>
+        <a href="sairModel.php">Sair</a>
     </div>
 
     <div class="content">

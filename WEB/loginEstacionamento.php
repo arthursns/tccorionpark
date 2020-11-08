@@ -97,10 +97,7 @@
                     <p class="message"><a href="index.php">Voltar ao ínicio</a></p>
                 </form>
             </div>
-        </div>vou testar aq
-
-
-
+        </div>
     </body>
 
 </html>

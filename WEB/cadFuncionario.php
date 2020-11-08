@@ -31,7 +31,6 @@ $exec2 = sqlsrv_query($conn, $selectNivelAcesso);
         <div id="nav01" class="w3-bar-block">
             <a class="w3-button w3-hover-yellow w3-hide-large w3-large w3-right w3-black" style="transition: .3s" href="javascript:void(0)" onclick="w3_close()">×</a>
             <a class="w3-bar-item w3-button w3-hover-yellow" style="transition: .3s" href="indexGerenciador.html">Inicio</a>
-            <a class="w3-bar-item w3-button w3-hover-yellow" style="transition: .3s" href="viewEstacionamentos.html">Estacionamentos</a>
             <a class="w3-bar-item w3-button w3-hover-yellow" style="transition: .3s" href="viewFuncionario.html">Funcionário</a>
             <a class="w3-bar-item w3-button w3-hover-yellow" style="transition: .3s" href="cadFuncionario.html">Cadastro Funcionário</a>
             <a class="w3-bar-item w3-button w3-hover-yellow" style="transition: .3s" href="#">Sair</a>
