@@ -1,13 +1,13 @@
 <?php
-include("onexaoBD.php");
+include("conexaoBD.php");
 include("protect.php");
 protect();
 
+$cargo = $_POST['cargoId'];
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $telefoneSemTratar = $_POST['telefone'];
 $telefone = preg_replace('/[^0-9]/', '', $telefoneSemTratar);
-$cargo = $_POST['cargo'];
 $usuario = $_POST['usuario'];
 $id_cli2 = $_SESSION['id_cli2'];
 $nivelAcesso = $_POST['nivelAcesso'];
@@ -26,10 +26,10 @@ if ($exec1 === false) {
 		die(print_r(sqlsrv_errors(), true));
 	}else{
 		if (!empty($_POST['senha'])) {
-			$editLogin = "UPDATE tb_login SET usuario = '$usuario', $id_nivel_acesso = $nivelAcesso WHERE id_login = $id_login";
+			$editLogin = "UPDATE tb_login SET usuario = '$usuario',id_nivel_acesso = $nivelAcesso WHERE id_login = $id_login";
 		}else{
 			$senha = md5(md5($_POST['senha']));
-			$editLogin = "UPDATE tb_login SET usuario = '$usuario', id_nivel_acesso = $nivelAcesso WHERE id_login = $id_login";
+			$editLogin = "UPDATE tb_login SET usuario = '$usuario', id_nivel_acesso = $nivelAcesso, senha = '$senha' WHERE id_login = $id_login";
 		}
 		
 		$exec3 = sqlsrv_query($conn, $editLogin);

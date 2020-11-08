@@ -3,6 +3,7 @@ include('conexaoBD.php');
 include("protect.php");
 protect();
 
+$nivelAcesso = $_POST['nivelAcesso'];
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $telefoneSemTratar = $_POST['telefone'];
@@ -11,7 +12,7 @@ $cargo = $_POST['cargo'];
 $usuario = $_POST['usuario'];
 $senha = md5(md5($_POST['senha']));
 $id_cli2 = $_SESSION['id_cli2'];
-$nivelAcesso = $_POST['nivelAcesso'];
+
 
 // Função para consultar o último Id inserido
 function idTemp($queryID) {

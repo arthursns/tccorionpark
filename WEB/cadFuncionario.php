@@ -5,17 +5,15 @@ protect();
 
 $selectCargos = "SELECT * FROM tb_cargo";
 $exec1 = sqlsrv_query($conn, $selectCargos);
-$cargos = sqlsrv_fetch_array($exec1);
 
 $selectNivelAcesso = "SELECT * FROM tb_nivel_acesso";
 $exec2 = sqlsrv_query($conn, $selectNivelAcesso);
-$nivelAcesso = sqlsrv_fetch_array($exec2);
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <title>Cadastro de Cupons</title>
+<meta charset="utf-8">
 <link rel="icon" type="image/icon" href="img/logo.ico" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/viewEstacionamento.css">
@@ -62,14 +60,14 @@ $nivelAcesso = sqlsrv_fetch_array($exec2);
                         <td>
                             <input type="text" id="telefoneUsuario" name="telefoneUsuario" placeholder="DDD + Telefone Ex: (1293456789)" class="telefoneUsuario"></td>
                         <td>
-                            <select name="cargo" id="cargo">
-                                <option value="">Selecione um cargo</option>
-                                <?php while ($cargos = sqlsrv_fetch_array($exec1)) { ?>
-                                    <option value="<?php echo $cargos['id_cargo']; ?>">
-                                        <?php echo $cargos['descricao']; ?>
-                                    </option>
-                                <?php } ?>
-                            </select></td>
+                             <select name="cargoId" id="cargo">
+                        <option value="">Selecione um cargo</option>
+                        <?php while($cargos = sqlsrv_fetch_array($exec1)){?>
+                        <option value="<?php echo $cargos['id_cargo']; ?>">
+                            <?php echo $cargos['descricao']; ?>
+                        </option>
+                    <?php }?>
+                    </select></td>
 
                     </tr>
             </table>

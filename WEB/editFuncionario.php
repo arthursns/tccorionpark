@@ -67,7 +67,7 @@ $exec5 = sqlsrv_query($conn, $selectNivelAcesso);
     </div>
     <div class="content">
         <div class="row">
-            <form action="cadFuncionarioModel.php" method="POST">
+            <form action="editFuncionarioModel.php" method="POST">
                     <h1>Dados Pessoais</h1>
                     <label for="fname">Nome</label>
                     <input type="text" id="fname" name="nome" placeholder="Nome" maxlength="255" value="<?php echo $dado['nome'] ?>">
@@ -76,7 +76,7 @@ $exec5 = sqlsrv_query($conn, $selectNivelAcesso);
                     <label>Telefone</label>
                     <input type="text" id="telefoneUsuario" name="telefone" placeholder="DDD + Telefone Ex: (1293456789)" value="<?php echo $dado2['numero']?>">
                     <label>Cargo</label>
-                    <select name="cargo" id="cargo">
+                    <select name="cargoId" id="cargo">
                         <option value="">Selecione um cargo</option>
                         <?php while($cargos = sqlsrv_fetch_array($exec4)){?>
                         <option <?php if($dado['id_cargo'] == $cargos['id_cargo']){echo 'selected';}?> value="<?php echo $cargos['id_cargo']; ?>">
@@ -104,8 +104,8 @@ $exec5 = sqlsrv_query($conn, $selectNivelAcesso);
                     </select>
                     <input type="hidden" name="id_login" value="<?php echo $dado['id_login']?>">
                     <input type="hidden" name="id_telefone" value="<?php echo $dado['id_telefone']?>">
-                    <input type="hidden" name="id_responsavel" value="<?php echo $idFuncionario?>">
-                    <input type="submit" value="Cadastrar">
+                    <input type="hidden" name="id_responsavel" value="<?php echo $idFuncionario ?>">
+                    <input type="submit" value="Editar">
                 </form>
         </div>
     </div>
