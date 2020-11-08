@@ -1,0 +1,27 @@
+.content h1 {
+    background-color: #F7CE3E;
+    padding: 10px;
+}
+
+.content .item {
+    margin: 5px;
+}
+
+.content .item a {
+    text-decoration: none;
+    color: black;
+}
+
+.content .item input {
+    width: 93%;
+}
+
+.content .item select {
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .content .item input {
+        width: 95%;
+    }
+}

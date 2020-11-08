@@ -9,7 +9,9 @@
     color: transparent;
 }
 
-input[type="text"] {
+input[type="text"],
+.content select,
+input[type="password"] {
     padding: 10px 55px;
     border: none;
 }
